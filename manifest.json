@@ -1,0 +1,38 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "assets/icons/toolbar/16.png",
+         "32": "assets/icons/toolbar/32.png",
+         "48": "assets/icons/toolbar/48.png",
+         "64": "assets/icons/toolbar/64.png"
+      },
+      "default_popup": "popup/popup.html",
+      "default_title": "__MSG_extensionTitle__"
+   },
+   "background": {
+      "service_worker": "background/service-worker.js"
+   },
+   "commands": {
+      "toggle-default-mode": {
+         "description": "__MSG_commandToggleDefault__",
+         "suggested_key": {
+            "default": "Ctrl+Shift+D",
+            "mac": "Command+Shift+D"
+         }
+      }
+   },
+   "description": "__MSG_extensionDescription__",
+   "host_permissions": [ "*://*/*" ],
+   "icons": {
+      "128": "assets/icons/128.png",
+      "16": "assets/icons/16.png",
+      "32": "assets/icons/32.png",
+      "48": "assets/icons/48.png",
+      "64": "assets/icons/64.png"
+   },
+   "manifest_version": 3,
+   "default_locale": "en",
+   "name": "__MSG_extensionName__",
+   "permissions": [ "storage", "scripting", "declarativeNetRequest" ],
+   "version": "1.0.2"
+}

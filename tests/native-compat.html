@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Native disguising compatibility</title></head>
+<body>
+<script>
+  window.originalUAData = navigator.userAgentData;
+  window.hostSameInstance = navigator.userAgentData === navigator.userAgentData;
+  window.nativeNavigatorDescriptor = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(navigator), "userAgentData");
+  window.originalUAProto = Object.getPrototypeOf(window.originalUAData);
+  window.originalBrands = Object.getOwnPropertyDescriptor(window.originalUAProto, "brands").get;
+  window.originalToJSON = window.originalUAProto.toJSON;
+  window.originalHighEntropy = window.originalUAProto.getHighEntropyValues;
+  window.nativeMeta = {
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "vendor": "Google Inc.",
+    "appversion": "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "attr": "Win32",
+    "text": "Windows",
+    "version": "156",
+    "mobile": false,
+    "native": true,
+    "forged": true,
+    "realbits": false,
+    "frames": true,
+    "brands": [
+      {"brand": "Chromium", "version": "156"},
+      {"brand": "Google Chrome", "version": "156"}
+    ],
+    "fullbrands": [
+      {"brand": "Chromium", "version": "156.0.0.0"},
+      {"brand": "Google Chrome", "version": "156.0.0.0"}
+    ],
+    "bundle": {
+      "platformversion": "13.0.0",
+      "bitness": "64",
+      "architecture": "x86",
+      "model": "",
+      "uafullversion": "156.0.0.0"
+    }
+  };
+  sessionStorage.setItem("useragent-switcher-metahints", JSON.stringify(window.nativeMeta));
+</script>
+<script src="../content/main.js"></script>
+<pre id="out">pending</pre>
+<script>
+(async function () {
+  const report = {};
+  try {
+    const chosen = navigator.userAgentData;
+    report.hostSameInstance = window.hostSameInstance;
+    report.nativeNavigatorGetter = Boolean(window.nativeNavigatorDescriptor && window.nativeNavigatorDescriptor.get);
+    report.nativeIdentityMatchesHost = window.hostSameInstance ?
+      chosen === window.originalUAData :
+      chosen !== window.originalUAData && navigator.userAgentData !== chosen;
+    report.sameNativePrototype = Object.getPrototypeOf(chosen) === window.originalUAProto;
+    report.nativeConstructor = chosen.constructor.name === "NavigatorUAData";
+    report.nativeTag = Object.prototype.toString.call(chosen) === "[object NavigatorUAData]";
+    report.noOwnProperties = Object.keys(chosen).length === 0;
+    report.nativeGetterCallSucceeds = Array.isArray(window.originalBrands.call(chosen));
+    report.currentBrandsAreSelected = chosen.brands.some(function (brand) {return brand.version === "156";});
+    report.currentPlatformIsSelected = chosen.platform === "Windows";
+    report.jsonMatches = chosen.toJSON().brands.every(function (brand) {return brand.version === "156";});
+    let invalidReceiverRejected = false;
+    try {
+      Object.getOwnPropertyDescriptor(window.originalUAProto, "brands").get.call({});
+    } catch (error) {
+      invalidReceiverRejected = String(error).includes("Illegal invocation");
+    }
+    report.invalidReceiverRejected = invalidReceiverRejected;
+    const high = await chosen.getHighEntropyValues(["platformVersion", "uaFullVersion", "fullVersionList", "bitness", "architecture"]);
+    report.selectedPlatformVersion = high.platformVersion === "13.0.0";
+    report.selectedBrowserBuild = high.uaFullVersion === "156.0.0.0";
+    report.selectedFullVersionList = high.fullVersionList.every(function (brand) {return brand.version === "156.0.0.0";});
+    report.selectedHardwareProfile = high.bitness === "64" && high.architecture === "x86";
+    report.nativeOriginalMethodSucceeds = Boolean((await window.originalHighEntropy.call(chosen, ["platformVersion"])).platformVersion);
+    report.navigatorUAMatches = navigator.userAgent.includes("Chrome/156.0.0.0");
+    const profile = {...window.nativeMeta, brands: [{"brand": "Chromium", "version": "155"}]};
+    profile.bundle = {...window.nativeMeta.bundle, uafullversion: "155.0.0.0"};
+    sessionStorage.setItem("useragent-switcher-metahints", JSON.stringify(profile));
+    const fresh = navigator.userAgentData;
+    report.liveProfileChanges = (window.hostSameInstance ? fresh === chosen : fresh !== chosen) &&
+      chosen.brands[0].version === "155" && fresh.brands[0].version === "155" &&
+      (await chosen.getHighEntropyValues(["uaFullVersion"])).uaFullVersion === "155.0.0.0";
+    sessionStorage.removeItem("useragent-switcher-metahints");
+    const restored = navigator.userAgentData;
+    report.nativeOnDefault = (window.hostSameInstance ? restored === chosen : restored !== chosen) &&
+      JSON.stringify(chosen.brands) === JSON.stringify(window.originalBrands.call(window.originalUAData));
+    report.nativeMethodOnDefault = Boolean((await chosen.getHighEntropyValues(["platformVersion"])).platformVersion);
+  } catch (error) {
+    report.error = String(error);
+    report.stack = error.stack;
+  }
+  const checks = Object.keys(report).filter(function (key) {return key !== "error" && key !== "stack" && key !== "hostSameInstance";});
+  report.passed = checks.length >= 15 && checks.every(function (key) {return report[key] === true;});
+  document.getElementById("out").textContent = JSON.stringify(report);
+})();
+</script>
+</body>
+</html>

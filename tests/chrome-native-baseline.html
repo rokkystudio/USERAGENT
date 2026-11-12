@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>NavigatorUAData baseline</title></head>
+<body><pre id="out">waiting</pre>
+<script>
+(async function () {
+  const report = {};
+  try {
+    const ua = navigator.userAgentData;
+    report.exists = Boolean(ua);
+    report.constructor = ua && ua.constructor ? ua.constructor.name : '';
+    if (ua) {
+      const proto = Object.getPrototypeOf(ua);
+      report.tag = Object.prototype.toString.call(ua);
+      report.prototypeName = proto.constructor.name;
+      report.protoKeys = Object.getOwnPropertyNames(proto);
+      report.descriptors = ['brands','mobile','platform','getHighEntropyValues','toJSON'].map(function(name) {
+        const d = Object.getOwnPropertyDescriptor(proto,name);
+        return [name, Boolean(d), Boolean(d && d.get), Boolean(d && d.value), d && d.configurable];
+      });
+      report.nativeBrands = ua.brands;
+      const fake = Object.create(proto);
+      try {Object.getOwnPropertyDescriptor(proto,'brands').get.call(fake); report.fakeBrands='OK';}
+      catch(err){report.fakeBrands=err.toString();}
+      try {proto.toJSON.call(fake); report.fakeJSON='OK';}
+      catch(err){report.fakeJSON=err.toString();}
+      try {await proto.getHighEntropyValues.call(fake,['architecture']);report.fakeHigh='OK';}
+      catch(err){report.fakeHigh=err.toString();}
+    }
+  }catch(e){report.error=e.stack;}
+  document.getElementById('out').textContent = JSON.stringify(report);
+})();
+</script></body></html>

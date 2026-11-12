@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="popup.css">
+    <link type="text/css" rel="stylesheet" href="explore/explore.css">
+    <link type="text/css" rel="stylesheet" href="sections/readout.css">
+    <link type="text/css" rel="stylesheet" href="sections/settings.css">
+    <link type="text/css" rel="stylesheet" href="sections/rows.css">
+    <link type="text/css" rel="stylesheet" href="sections/advanced.css">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <div id="section-1">
+      <table id="mobile-browsers-head">
+        <tbody>
+          <tr>
+            <td colspan=6 class="description" data-i18n="uiMobileDevice">Mobile Device</td>
+          </tr>
+          <tr>
+            <td colspan=6 class="separator"></td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="mobile-browsers">
+        <tbody>
+          <tr>
+            <td id="ios" title="Apple iOS (iPhone)" data-i18n-title="tipAppleIOSIPhone"></td>
+            <td id="android" title="Google Android" data-i18n-title="tipGoogleAndroid"></td>
+            <td id="windowsp" title="Microsoft Windows Phone" data-i18n-title="tipMicrosoftWindowsPhone"></td>
+            <td id="tizen" title="Samsung Tizen OS" data-i18n-title="tipSamsungTizenOS"></td>
+            <td id="symbian" title="Nokia Symbian" data-i18n-title="tipNokiaSymbian"></td>
+            <td id="firefoxos" title="Mozilla Firefox OS" data-i18n-title="tipMozillaFirefoxOS"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="section-2">
+      <table id="desktop-browsers-head">
+        <tbody>
+          <tr>
+            <td colspan=6 class="description" data-i18n="uiDesktopBrowser">Desktop Browser</td>
+          </tr>
+          <tr>
+            <td colspan=6 class="separator"></td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="desktop-browsers">
+        <tbody>
+          <tr>
+            <td id="chrome" title="Google Chrome" data-i18n-title="tipGoogleChrome"></td>
+            <td id="opera" title="Opera" data-i18n-title="tipOpera"></td>
+            <td id="firefox" title="Mozilla Firefox" data-i18n-title="tipMozillaFirefox"></td>
+            <td id="safari" title="Apple Safari" data-i18n-title="tipAppleSafari"></td>
+            <td id="edge" title="Microsoft Edge" data-i18n-title="tipMicrosoftEdge"></td>
+            <td id="explorer" title="Microsoft Explorer" data-i18n-title="tipMicrosoftExplorer"></td>
+          </tr>
+          <tr>
+            <td colspan=6 class="separator"></td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="operating-systems-head">
+        <tbody>
+          <tr>
+            <td colspan=6 class="description" data-i18n="uiOperatingSystem">Operating System</td>
+          </tr>
+          <tr>
+            <td colspan=6 class="separator"></td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="operating-systems">
+        <tbody>
+          <tr>
+            <td id="windowsd" title="Microsoft Windows" data-i18n-title="tipMicrosoftWindows"></td>
+            <td id="mac" title="Apple Mac-OS" data-i18n-title="tipAppleMacOS"></td>
+            <td id="linux" title="Linux" data-i18n-title="tipLinux"></td>
+            <td id="chromeOS" title="Google Chrome-OS" data-i18n-title="tipGoogleChromeOS"></td>
+            <td id="ibm" title="IBM Warp OS/2" data-i18n-title="tipIBMWarpOS2"></td>
+            <td id="freebsd" title="FreeBSD OS" data-i18n-title="tipFreeBSDOS"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="section-4">
+      <table id="settings-head">
+        <tbody>
+          <tr>
+            <td class="description" data-i18n="uiSettings">Settings</td>
+            <td class="backbutton" id="settings-back" title="Go back to the main view" data-i18n-title="tipGoBackToTheMainView">
+              <svg width="18" height="18" viewBox="0 0 24 24">
+                <path d="M15.2 4.6 L16.8 6.2 L11 12 L16.8 17.8 L15.2 19.4 L7.8 12 Z"/>
+              </svg>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="settings-modeset">
+        <tbody>
+          <tr>
+            <td colspan=2 class="modeset-row" title="Choose where picked useragents are applied: to every tab, or to the tab you have open only" data-i18n-title="tipChooseWherePickedUseragentsAreAppliedToEveryTab">
+              <span class="modelabel" data-i18n="uiApplyUseragentsTo">Apply useragents to</span>
+              <span class="modeset" id="mode-thistab" title="Picked useragents apply to this tab only — other tabs keep the default useragent" data-i18n-title="tipPickedUseragentsApplyToThisTabOnlyOtherTabs" data-i18n="uiActiveTabOnly">Active tab only</span>
+              <span class="modeset" id="mode-global" title="Picked useragents apply to every tab" data-i18n-title="tipPickedUseragentsApplyToEveryTab" data-i18n="uiAllTabs">All tabs</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="settings-scroll">
+        <table id="extension-settings">
+          <tbody>
+            <tr>
+              <td colspan=2 class="separator"></td>
+            </tr>
+            <tr>
+              <td class="name" title="Choose the popup language independently of the spoofed browser language" data-i18n-title="tipInterfaceLanguage">
+                <label for="ui-language" data-i18n="uiLanguage">Interface language</label>
+                <select id="ui-language" title="Choose the popup language independently of the spoofed browser language" data-i18n-title="tipInterfaceLanguage">
+                  <option value="auto" data-i18n="uiLanguageAuto">Browser language</option>
+                  <option value="ru" data-i18n="uiLanguageRussian">Русский</option>
+                  <option value="en" data-i18n="uiLanguageEnglish">English</option>
+                </select>
+              </td>
+              <td class="control"></td>
+            </tr>
+            <tr>
+              <td class="name" title="Also fakes the client-hint headers and the JS client-hint APIs so modern sites cannot see through the switch" data-i18n-title="tipAlsoFakesTheClientHintHeadersAndTheJS">
+                <label for="pref-spoof" data-i18n="uiCompleteSpoof">Complete spoof</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-spoof" data-key="spoof" title="Fake Sec-CH-UA headers, navigator.userAgentData, platform and vendor too" data-i18n-title="tipFakeSecCHUAHeadersNavigatorUserAgentDataPlatformAnd">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="Also sends the fake UA on page fetches, AJAX requests and websockets, not only page loads and iframes" data-i18n-title="tipAlsoSendsTheFakeUAOnPageFetchesAJAX">
+                <label for="pref-coverage" data-i18n="uiFullRequestCoverage">Full request coverage</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-coverage" data-key="coverage" title="Fake UA on all request types" data-i18n-title="tipFakeUAOnAllRequestTypes">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="Open tabs pick up a useragent switch immediately, without a page reload" data-i18n-title="tipOpenTabsPickUpAUseragentSwitchImmediatelyWithout">
+                <label for="pref-liveupdate" data-i18n="uiLiveApplyToOpenTabs">Live apply to open tabs</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-liveupdate" data-key="liveupdate" title="Apply switches to open tabs instantly" data-i18n-title="tipApplySwitchesToOpenTabsInstantly">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="Asks before switching back to the default useragent" data-i18n-title="tipAsksBeforeSwitchingBackToTheDefaultUseragent">
+                <label for="pref-confirmdefault" data-i18n="uiConfirmBeforeDefault">Confirm before Default</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-confirmdefault" data-key="confirmdefault" title="Ask for confirmation before switching to the default useragent" data-i18n-title="tipAskForConfirmationBeforeSwitchingToTheDefaultUseragent">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="Asks before the factory reset clears all settings, rules and the toolbar icon state" data-i18n-title="tipAsksBeforeTheFactoryResetClearsAllSettingsRules">
+                <label for="pref-confirmreset" data-i18n="uiConfirmBeforeReset">Confirm before Reset</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-confirmreset" data-key="confirmreset" title="Ask for confirmation before the factory reset" data-i18n-title="tipAskForConfirmationBeforeTheFactoryReset">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="Show the back arrow in the header of the settings, custom useragents and custom domains tabs — the home button in the footer already returns to the main view" data-i18n-title="tipShowTheBackArrowInTheHeaderOfThe">
+                <label for="pref-backbuttons" data-i18n="uiShowBackButtons">Show back buttons</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-backbuttons" data-key="backbuttons" title="Show the back arrow in the panel headers" data-i18n-title="tipShowTheBackArrowInThePanelHeaders">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="The popup reopens on the view that was open when it closed — settings, custom useragents or custom domains; off always starts on the main view" data-i18n-title="tipThePopupReopensOnTheViewThatWasOpen">
+                <label for="pref-remember" data-i18n="uiRememberLastView">Remember last view</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-remember" data-key="remember" title="Reopen the popup on the last open view" data-i18n-title="tipReopenThePopupOnTheLastOpenView">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="When the fake browser has no vendor of its own (Firefox and friends), keep this browser's real vendor visible — useful only on sites that trust their own engine's vendor; off keeps the disguise complete" data-i18n-title="tipWhenTheFakeBrowserHasNoVendorOfIts">
+                <label for="pref-realvendor" data-i18n="uiRealVendorPassthrough">Real vendor passthrough</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-realvendor" data-key="realvendor" title="Keep the real vendor visible when the fake browser sends none" data-i18n-title="tipKeepTheRealVendorVisibleWhenTheFakeBrowser">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="Cleans pasted, saved and imported useragent strings before the rules engine sees them: printable characters only, no line breaks, capped at 512 — a broken string can no longer disable switching; off hands strings over untouched" data-i18n-title="tipCleansPastedSavedAndImportedUseragentStringsBeforeThe">
+                <label for="pref-strictclean" data-i18n="uiStrictUACleanup">Strict UA cleanup</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-strictclean" data-key="strictclean" title="Clean pasted and imported strings before the engine applies them" data-i18n-title="tipCleanPastedAndImportedStringsBeforeTheEngineApplies">
+              </td>
+            </tr>
+            <tr>
+              <td colspan=2 class="separator"></td>
+            </tr>
+            <tr>
+              <td class="name" title="Tints the description header strips, the back arrows and the active mode chips in every tab, including the footer status line" data-i18n-title="tipTintsTheDescriptionHeaderStripsTheBackArrowsAnd">
+                <label for="pref-descriptioncolor" data-i18n="uiHeaderColor">Header color</label>
+                <span id="color-reset" class="rowaction" title="Return the header color to the theme default" data-i18n-title="tipReturnTheHeaderColorToTheThemeDefault">
+                  <svg width="13" height="13" viewBox="0 0 48 48">
+                    <path d="M 9.8212753,13.365952 H 34.12766 V 20.455317 L 44.25532,10.327657 34.12766,0.199997 V 7.2893585 H 3.744681 V 22.987232 H 9.8212753 Z"/>
+                    <path d="M 38.178723,34.634044 13.872338,34.634037 13.872339,27.544678 3.744681,37.672337 13.872339,47.8 13.87234,40.710639 44.255317,40.710637 44.255318,25.012763 38.178724,25.012764 Z"/>
+                  </svg>
+                </span>
+              </td>
+              <td class="control">
+                <input type="color" id="pref-descriptioncolor" title="Pick the color of the description header strips" data-i18n-title="tipPickTheColorOfTheDescriptionHeaderStrips">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="The footer status strip: tall or short height and plain coloring on the left, and the checkbox on the right shows or hides the strip entirely" data-i18n-title="tipTheFooterStatusStripTallOrShortHeightAnd">
+                <label for="pref-statusshow" data-i18n="uiStatusRow">Status row</label>
+                <span class="lookchips">
+                  <span class="lookchip" id="status-look-tall" title="Taller strip with the inner shine of the settings rows" data-i18n-title="tipTallerStripWithTheInnerShineOfTheSettings" data-i18n="uiTall">Tall</span>
+                  <span class="lookchip" id="status-look-short" title="Small one-line strip (default)" data-i18n-title="tipSmallOneLineStripDefault" data-i18n="uiShort">Short</span>
+                  <span class="lookchip" id="status-look-plain" title="Strip the background color: plain cell with a thin border — composes with tall or short" data-i18n-title="tipStripTheBackgroundColorPlainCellWithAThin" data-i18n="uiPlain">Plain</span>
+                </span>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-statusshow" data-key="statusshow" title="Show the footer status strip" data-i18n-title="tipShowTheFooterStatusStrip">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="section-5">
+      <table id="advanced-table">
+        <tbody>
+          <tr>
+            <td class="description" data-i18n="uiCustomUseragents">Custom useragents</td>
+            <td class="backbutton" id="advanced-back" title="Go back to the main view" data-i18n-title="tipGoBackToTheMainView">
+              <svg width="18" height="18" viewBox="0 0 24 24">
+                <path d="M15.2 4.6 L16.8 6.2 L11 12 L16.8 17.8 L15.2 19.4 L7.8 12 Z"/>
+              </svg>
+            </td>
+          </tr>
+          <tr class="modeline">
+            <td colspan=2 data-i18n="uiThisTabModeIsOnPicksBelowApplyTo">This-tab mode is on — picks below apply to this tab only</td>
+          </tr>
+          <tr>
+            <td colspan=2 class="separator"></td>
+          </tr>
+          <tr>
+            <td colspan=2 class="userinput" title="Type or paste a useragent string, then apply it or save it to the list below" data-i18n-title="tipTypeOrPasteAUseragentStringThenApplyIt">
+              <input id="editor-ua" spellcheck="false" placeholder="Type or paste a useragent string" data-i18n-placeholder="tipTypeOrPasteAUseragentString"></input>
+              <span id="editor-apply" class="rowaction" title="Apply this useragent — to every tab, or to this tab only, as chosen in Settings" data-i18n-title="tipApplyThisUseragentToEveryTabOrToThis">
+                <svg width="12" height="12" viewBox="0 0 32 32">
+                  <path d="M1 14 L5 10 L13 18 L27 4 L31 8 L13 26 z"/>
+                </svg>
+              </span>
+              <span id="editor-save" class="rowaction" title="Save this string to the saved useragents list below" data-i18n-title="tipSaveThisStringToTheSavedUseragentsListBelow">
+                <svg width="12" height="12" viewBox="0 0 122.8799 122.8799">
+                  <rect width="117.37268" height="13.079653" x="2.4979999" y="54.916737"></rect>
+                  <rect width="117.37268" height="13.079653" x="2.7702174" y="-67.724174" transform="rotate(90)"></rect>
+                </svg>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan=2 class="separator"></td>
+          </tr>
+          <tr class="pertabline">
+            <td colspan=2 class="userinput" id="pertab-td" title="The useragent override currently applied to this tab by This-tab mode" data-i18n-title="tipTheUseragentOverrideCurrentlyAppliedToThisTabBy">
+              <span id="pertab-string" data-i18n="uiDefaultUseragent">default useragent</span>
+              <span id="pertab-clear" class="rowaction" title="Remove this tab's useragent override — the tab returns to the global useragent" data-i18n-title="tipRemoveThisTabSUseragentOverrideTheTabReturns">
+                <svg width="13" height="13" viewBox="0 0 24 24">
+                  <path d="M 7.307,19.125 5.875,17.691 10.566,12 5.875,6.309 7.307,4.875 12,10.566 16.691,4.875 18.125,6.309 13.434,12 18.125,17.691 16.691,19.125 12,13.434 Z"/>
+                </svg>
+              </span>
+            </td>
+          </tr>
+          <tr class="pertabline">
+            <td colspan=2 class="separator"></td>
+          </tr>
+          <tr>
+            <td colspan=2 class="description" data-i18n="uiSavedUseragents">Saved useragents</td>
+          </tr>
+          <tr>
+            <td colspan=2 class="userinput" title="Saved useragent strings: apply the selected one, load it into the editor, or remove it" data-i18n-title="tipSavedUseragentStringsApplyTheSelectedOneLoadIt">
+              <select id="library-list" title="Pick a saved useragent string" data-i18n-title="tipPickASavedUseragentString"></select>
+              <span id="library-apply" class="rowaction" title="Apply the selected string — to every tab, or to this tab only, as chosen in Settings" data-i18n-title="tipApplyTheSelectedStringToEveryTabOrTo">
+                <svg width="13" height="13" viewBox="0 0 32 32">
+                  <path d="M1 14 L5 10 L13 18 L27 4 L31 8 L13 26 z"/>
+                </svg>
+              </span>
+              <span id="library-edit" class="rowaction" title="Load the selected string into the editor above" data-i18n-title="tipLoadTheSelectedStringIntoTheEditorAbove">
+                <svg width="13" height="13" viewBox="0 0 24 24">
+                  <path d="M3,17.25 L3,21 6.75,21 17.81,9.94 14.06,6.19 3,17.25 Z M 20.71,7.04 c 0.39,-0.39 0.39,-1.02 0,-1.41 L 18.37,3.29 c -0.39,-0.39 -1.02,-0.39 -1.41,0 L 15.13,5.12 18.88,8.87 20.71,7.04 Z"/>
+                </svg>
+              </span>
+              <span id="library-remove" class="rowaction" title="Remove the selected saved string" data-i18n-title="tipRemoveTheSelectedSavedString">
+                <svg width="13" height="13" viewBox="0 0 26 31">
+                  <path d="M23.524,5H19V0H7v5H2.476C0.946,5,0,5.939,0,7.468V9h26V7.468C26,5.939,25.053,5,23.524,5z M9,2h8v3H9V2z"/>
+                  <path d="M1.035,11l3.49,17.478C4.525,29.854,5.643,31,7.019,31H13h5.981c1.376,0,2.493-1.146,2.493-2.522L24.965,11 H13H1.035z"/>
+                </svg>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan=2 class="separator"></td>
+          </tr>
+          <tr>
+            <td colspan=2 class="description" data-i18n="uiDetectedUseragent">Detected useragent</td>
+          </tr>
+          <tr>
+            <td colspan=2 class="userinput" id="readout-td" title="What this page currently reports as its useragent — use it to check that your switch took effect" data-i18n-title="tipWhatThisPageCurrentlyReportsAsItsUseragentUse">
+              <span id="readout-text" spellcheck="false"></span>
+              <span id="readout-copy" title="Copy the detected useragent to the clipboard" data-i18n-title="tipCopyTheDetectedUseragentToTheClipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24">
+                  <g transform="translate(-683.000000, -227.000000)">
+                    <path d="M 688.98187,228.53232 V 231.86948 H 702.33052 V 245.21813 H 705.66768 V 228.53232 Z M 684.76261,234.98366 C 684.63585,234.98366 684.53232,235.06571 684.53232,235.16834 V 249.48301 C 684.53232,249.58492 684.63531,249.66768 684.76261,249.66768 H 698.98794 C 699.1147,249.66768 699.21606,249.58563 699.21606,249.48301 V 235.16834 C 699.21606,235.06642 699.11524,234.98366 698.98794,234.98366 Z"/>
+                  </g>
+                </svg>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="section-6">
+      <table id="domains-table">
+        <tbody>
+          <tr>
+            <td class="description" data-i18n="uiCustomDomains">Custom domains</td>
+            <td class="backbutton" id="domains-back" title="Go back to the main view" data-i18n-title="tipGoBackToTheMainView">
+              <svg width="18" height="18" viewBox="0 0 24 24">
+                <path d="M15.2 4.6 L16.8 6.2 L11 12 L16.8 17.8 L15.2 19.4 L7.8 12 Z"/>
+              </svg>
+            </td>
+          </tr>
+          <tr class="modeline">
+            <td colspan=2 data-i18n="uiThisTabModeIsOnPicksIgnoreTheDomain">This-tab mode is on — picks ignore the domain scope</td>
+          </tr>
+          <tr>
+            <td colspan=2 class="separator"></td>
+          </tr>
+          <tr>
+            <td colspan=2 class="modeset-row" title="Choose whether the useragent applies only on the listed domains, or on every site except the listed ones" data-i18n-title="tipChooseWhetherTheUseragentAppliesOnlyOnTheListed">
+              <span class="modelabel" data-i18n="uiGlobalScope">Global scope</span>
+              <span class="modeset" id="scope-exclude" title="Exclusive: the useragent applies on every site except the domains in the list below" data-i18n-title="tipExclusiveTheUseragentAppliesOnEverySiteExceptThe" data-i18n="uiExclusive">Exclusive</span>
+              <span class="modeset" id="scope-include" title="Inclusive: the useragent applies only on the domains in the list below" data-i18n-title="tipInclusiveTheUseragentAppliesOnlyOnTheDomainsIn" data-i18n="uiInclusive">Inclusive</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan=2 class="scopenote">
+              <span class="noteline"><strong data-i18n="uiInclusive">Inclusive</strong> <span data-i18n="uiTheUseragentAppliesOnlyOnTheDomainsInThe">— the useragent applies only on the domains in the list below</span></span>
+              <span class="noteline"><strong data-i18n="uiExclusive">Exclusive</strong> <span data-i18n="uiTheUseragentAppliesOnEverySiteExceptTheDomains">— the useragent applies on every site except the domains in the list below</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan=2 class="separator"></td>
+          </tr>
+          <tr>
+            <td colspan=2 class="description" data-i18n="uiDomainList">Domain list</td>
+          </tr>
+          <tr>
+            <td colspan=2 class="userinput domains-input" title="One domain per line: yahoo.com, google.com — or all_urls for every site" data-i18n-title="tipOneDomainPerLineYahooComGoogleComOr">
+              <textarea id="url" spellcheck="false" placeholder="i.e. yahoo.com&#10;www.google.com&#10;or all_urls" data-i18n-placeholder="tipIEYahooComWwwGoogleComOrAll"></textarea>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="section-7">
+      <table id="hardening-head">
+        <tbody>
+          <tr>
+            <td class="description" data-i18n="uiHardeningRules">Hardening rules</td>
+            <td class="backbutton" id="hardening-back" title="Go back to the main view" data-i18n-title="tipGoBackToTheMainView">
+              <svg width="18" height="18" viewBox="0 0 24 24">
+                <path d="M15.2 4.6 L16.8 6.2 L11 12 L16.8 17.8 L15.2 19.4 L7.8 12 Z"/>
+              </svg>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="hardening-scroll">
+        <table id="extension-hardening">
+          <tbody>
+            <tr>
+              <td colspan=2 class="separator"></td>
+            </tr>
+            <tr>
+              <td class="name" title="Makes the fake survive the read-back checks: reading a property's own code still answers like the browser's built-in code; off leaves a small crack a tester page can find" data-i18n-title="tipMakesTheFakeSurviveTheReadBackChecksReading">
+                <label for="pref-native" data-i18n="uiNativeDisguisingCodeReadsBackAsBuiltIn">Native disguising (code reads back as built-in)</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-native" data-key="native" title="The fake survives the classic read-back checks" data-i18n-title="tipTheFakeSurvivesTheClassicReadBackChecks">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="Builds the small brand list Chrome itself would send for the faked version, instead of the fixed list most spoofers carry; off restores the fixed list" data-i18n-title="tipBuildsTheSmallBrandListChromeItselfWouldSend">
+                <label for="pref-grease" data-i18n="uiComputedClientHintsBrandListFitsTheFake">Computed client hints (brand list fits the fake)</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-grease" data-key="grease" title="Brand list and order derive from the faked version" data-i18n-title="tipBrandListAndOrderDeriveFromTheFakedVersion">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="Core high-entropy values always stay consistent with the selected Chromium profile; this option additionally exposes model and form-factor details" data-i18n-title="tipCoreHighEntropyValuesAlwaysStayConsistentWithThe">
+                <label for="pref-entropy" data-i18n="uiRichEntropyDetailsModelAndFormFactors">Rich entropy details (model and form factors)</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-entropy" data-key="entropy" title="Add model and form-factor details to the consistent core values" data-i18n-title="tipAddModelAndFormFactorDetailsToTheConsistent">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="Sites that ask for extra browser details get the REAL machine's answers — useful when a page may see through the fake on purpose; off keeps every detail consistent with the fake" data-i18n-title="tipSitesThatAskForExtraBrowserDetailsGetThe">
+                <label for="pref-realbits" data-i18n="uiRealHighEntropyValuesRevealsThisMachine">Real high-entropy values (reveals this machine)</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-realbits" data-key="realbits" title="Extra details answer this machine (reveals the fake)" data-i18n-title="tipExtraDetailsAnswerThisMachineRevealsTheFake">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="Removes browser properties the faked browser should not have (a fake Chrome answers nothing for Firefox-only fields, a fake Firefox hides the Chrome button); off leaves the extras in place" data-i18n-title="tipRemovesBrowserPropertiesTheFakedBrowserShouldNotHave">
+                <label for="pref-deleteleftovers" data-i18n="uiDeleteBrowserLeftoversRemovesForeignFields">Delete browser leftovers (removes foreign fields)</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-deleteleftovers" data-key="deleteleftovers" title="Extras the faked family would not have get removed" data-i18n-title="tipExtrasTheFakedFamilyWouldNotHaveGetRemoved">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="A fake Firefox reports the short version string the real Firefox uses (a long, Chrome-shaped string would give the fake away); off keeps the long string everywhere" data-i18n-title="tipAFakeFirefoxReportsTheShortVersionStringThe">
+                <label for="pref-shortappversion" data-i18n="uiShortAppVersionFirefoxForm">Short appVersion (Firefox form)</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-shortappversion" data-key="shortappversion" title="Firefox fakes use the short version string" data-i18n-title="tipFirefoxFakesUseTheShortVersionString">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="Sites can inspect the code behind a changed property — this makes our code answer like the browser's built-in code; off exposes our code to anyone who looks closely (testing aid)" data-i18n-title="tipSitesCanInspectTheCodeBehindAChangedProperty">
+                <label for="pref-forged" data-i18n="uiForgedToStringChangedCodeHides">Forged toString (changed code hides)</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-forged" data-key="forged" title="Changed code answers like built-in code" data-i18n-title="tipChangedCodeAnswersLikeBuiltInCode">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="Sites can ask how many CPU cores and how much memory the device has — the fake answers with fixed, believable numbers instead of yours; off passes the real numbers through" data-i18n-title="tipSitesCanAskHowManyCPUCoresAndHow">
+                <label for="pref-pindevice" data-i18n="uiPinDeviceSpecsFakeCoresMemory">Pin device specs (fake cores & memory)</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-pindevice" data-key="pindevice" title="Cores and memory answer fixed fake numbers" data-i18n-title="tipCoresAndMemoryAnswerFixedFakeNumbers">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="Sites that run automation tools (bots, test drivers) carry a flag pages read — this answers false while the fake is on, like a normal session; off passes the real flag through" data-i18n-title="tipSitesThatRunAutomationToolsBotsTestDriversCarry">
+                <label for="pref-hidewebdriver" data-i18n="uiHideAutomationFlagBotBadgeOff">Hide automation flag (bot badge off)</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-hidewebdriver" data-key="hidewebdriver" title="The automation flag answers false while the fake is on" data-i18n-title="tipTheAutomationFlagAnswersFalseWhileTheFakeIs">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="A page answer whose text is exactly this browser's real identity readback is a test trap — this switch lets such a page-level echo report the fake instead; off hands the real string through, and any other page text is never touched" data-i18n-title="tipAPageAnswerWhoseTextIsExactlyThisBrowser">
+                <label for="pref-fakeecho" data-i18n="uiEchoGuardUAEchoesAnswerTheFake">Echo guard (UA echoes answer the fake)</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-fakeecho" data-key="fakeecho" title="A page answer that is exactly the real identity reads as the fake" data-i18n-title="tipAPageAnswerThatIsExactlyTheRealIdentity">
+              </td>
+            </tr>
+            <tr>
+              <td colspan=2 class="description" data-i18n="uiIframeRules">Iframe rules</td>
+            </tr>
+            <tr>
+              <td class="name" title="Sites run parts of their page in hidden boxes before our script can arrive there — this switch sends the fake ahead of time in the page's answer, so even their first script reads it; off uses the slower round trip" data-i18n-title="tipSitesRunPartsOfTheirPageInHiddenBoxes">
+                <label for="pref-earlypayload" data-i18n="uiFirstPaintSpoofFakeShipsEarly">First-paint spoof (fake ships early)</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-earlypayload" data-key="earlypayload" title="Every frame reports the fake before its first script runs" data-i18n-title="tipEveryFrameReportsTheFakeBeforeItsFirstScript">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="Hidden boxes on a page report the fake like the main page; off narrows everything to the main page only, so no layer contradicts another" data-i18n-title="tipHiddenBoxesOnAPageReportTheFakeLike">
+                <label for="pref-iframes" data-i18n="uiSpoofIframesBoxesGetTheFake">Spoof iframes (boxes get the fake)</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-iframes" data-key="iframes" title="Frames of the tab carry the fake too" data-i18n-title="tipFramesOfTheTabCarryTheFakeToo">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="Sites build locked boxes and read the identity inside them the moment the box is created; this switch hands the fake over inside that create action itself; off leaves locked boxes untouched" data-i18n-title="tipSitesBuildLockedBoxesAndReadTheIdentityInside">
+                <label for="pref-spoofsandbox" data-i18n="uiSpoofSandboxedIframesLockedBoxesToo">Spoof sandboxed iframes (locked boxes too)</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-spoofsandbox" data-key="spoofsandbox" title="Locked frames get the fake the moment they are built" data-i18n-title="tipLockedFramesGetTheFakeTheMomentTheyAre">
+              </td>
+            </tr>
+            <tr>
+              <td class="name" title="Normally the fake travels invisibly; this debug switch leaves its trace readable in the browser's timeline for checking — keep it off for daily use" data-i18n-title="tipNormallyTheFakeTravelsInvisiblyThisDebugSwitchLeaves">
+                <label for="pref-debugpayload" data-i18n="uiDebugTraceFakeVisibleToPages">Debug trace (fake visible to pages)</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-debugpayload" data-key="debugpayload" title="The Server-Timing payload stays readable (testing aid)" data-i18n-title="tipTheServerTimingPayloadStaysReadableTestingAid">
+              </td>
+            </tr>
+            <tr>
+              <td colspan=2 class="description" data-i18n="uiMatchedLanguage">Matched language</td>
+            </tr>
+            <tr>
+              <td class="name" title="The fake speaks the language list below: pages get the chosen language instead of this browser's real one; off leaves language untouched — a language switch is visible on every page" data-i18n-title="tipTheFakeSpeaksTheLanguageListBelowPagesGet">
+                <label for="pref-matchlang" data-i18n="uiMatchBrowserLanguageLanguageFollowsFake">Match browser language (language follows fake)</label>
+              </td>
+              <td class="control">
+                <input type="checkbox" id="pref-matchlang" data-key="matchlang" title="Language header and navigator.languages move together" data-i18n-title="tipLanguageHeaderAndNavigatorLanguagesMoveTogether">
+              </td>
+            </tr>
+            <tr>
+              <td colspan=2 class="userinput">
+                <input type="text" id="lang-value" title="The language list used when match-language is on: comma separated in order of importance, first entry is the main language (en-US, en); up to eight entries" data-i18n-title="tipTheLanguageListUsedWhenMatchLanguageIsOn">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="section-3">
+      <table id="footer">
+        <tbody>
+          <tr class="modeline">
+            <td colspan=17 data-i18n="uiThisTabModeIsOnChangesApplyToThis">This-tab mode is on — changes apply to this tab only</td>
+          </tr>
+          <tr>
+            <td colspan=17 class="description" id="status-td"><div id="status-text" data-i18n="uiUserAgentSwitcher">UserAgent Switcher</div></td>
+          </tr>
+          <tr>
+            <td colspan=17 class="separator"></td>
+          </tr>
+          <tr>
+            <td class="footer button" id="home" title="Show the main useragent view" data-i18n-title="tipShowTheMainUseragentView">
+              <svg width="16" height="16" viewBox="0 0 22 22">
+                <path d="M20,20v-8h2v0L12,3L2,12v0h2v8c0,0.6,0.4,1,1,1h5v-7h4v7h5C19.6,21,20,20.6,20,20z"/>
+              </svg>
+            </td>
+            <td class="footer button" id="settings" title="Open the settings panel" data-i18n-title="tipOpenTheSettingsPanel">
+              <svg width="14" height="14" viewBox="0 0 28 28">
+                <g transform="matrix(2.1646693,0,0,2.1646693,-1004.7755,-822.57435)">
+                  <g transform="translate(464,380)">
+                    <path d="M 5.291747 7.3914293e-06 C 5.143599 7.3914293e-06 4.9923362 0.079047754 4.9669283 0.25986233 L 4.7070734 2.0147854 C 4.3170741 2.1447853 3.8930007 2.3918547 3.6017877 2.665325 L 2.0417558 2.0147854 C 1.8467562 1.9497856 1.679114 1.996668 1.5870096 2.1447129 L 0.28683269 4.4202481 C 0.24592767 4.5195349 0.2867604 4.7161217 0.41676016 4.8100305 L 1.7819008 5.8503525 C 1.70197 6.2886408 1.709374 6.7144634 1.7819008 7.1496272 L 0.41676016 8.2549129 C 0.2867604 8.3849125 0.28679703 8.5146959 0.35179643 8.6446953 L 1.6519734 10.920231 C 1.7169742 10.985231 1.8467562 11.050195 2.0417558 10.985194 L 3.6667514 10.334655 C 3.9917509 10.594653 4.3416255 10.821626 4.7720371 10.985194 L 5.0318921 12.675154 C 5.0318921 12.805155 5.161711 12.935009 5.3567107 12.935009 L 7.9570646 12.935009 C 8.0870641 12.935009 8.2818833 12.805155 8.2818833 12.675154 L 8.5417382 10.985194 C 8.9425138 10.855195 9.3220246 10.594653 9.647024 10.334655 L 11.27202 10.985194 C 11.402018 11.050194 11.596803 10.985266 11.661802 10.855267 L 12.961979 8.5797316 C 13.026979 8.449732 13.027015 8.2549495 12.897015 8.1899492 L 11.401947 7.1496272 C 11.481867 6.7113382 11.474477 6.2855156 11.401947 5.8503525 L 12.767088 4.7450668 C 12.897089 4.615067 12.897052 4.485284 12.832051 4.3552844 L 11.531875 2.0797491 C 11.466875 2.0147493 11.337092 1.9497857 11.142092 2.0147854 L 9.5170965 2.665325 C 9.1920973 2.405326 8.8287526 2.1447853 8.4118108 2.0147854 L 8.1519558 0.32482606 C 8.1298436 0.19516072 8.0366195 7.3914293e-06 7.8921009 7.3914293e-06 L 5.291747 7.3914293e-06 z M 6.591924 4.2253569 C 7.8269211 4.2253569 8.8665569 5.2649922 8.8665569 6.4999899 C 8.8665569 7.7349872 7.8269211 8.7746228 6.591924 8.7746228 C 5.356926 8.7746228 4.3163887 7.7349872 4.3163887 6.4999899 C 4.3163887 5.2649922 5.356926 4.2253569 6.591924 4.2253569 z"/>
+                  </g>
+                </g>
+              </svg>
+            </td>
+            <td class="footer button" id="domains" title="Open the custom domains view: where the global useragent applies" data-i18n-title="tipOpenTheCustomDomainsViewWhereTheGlobalUseragent">
+              <svg width="16" height="16" viewBox="0 0 48 48">
+                <path d="M 24.002796,2.5619841e-4 C 13.287886,2.5619841e-4 5.2924998,6.4556356 1.8306376,14.814398 -1.6312246,23.173161 -0.53879905,33.387514 7.0368435,40.963157 14.612486,48.538799 24.826839,49.631225 33.185602,46.169362 41.544365,42.7075 47.999744,34.712114 47.999744,23.997203 48.060545,10.712394 37.287554,-0.06054475 24.002796,2.5619841e-4 Z M 22.328439,3.5124832 V 15.625415 h -6.945968 l 0.15043,-0.680208 c 0.500375,-2.232119 1.309649,-4.385824 2.400349,-6.39657 0.855929,-1.6557775 2.041957,-3.1184977 3.486065,-4.2970818 z m 3.348715,0 0.909124,0.739072 c 1.444108,1.1785841 2.630136,2.6413043 3.486065,4.2970818 1.0907,2.010746 1.899974,4.164451 2.400349,6.39657 l 0.15043,0.680208 H 25.677154 V 4.6832255 Z M 16.265432,4.7682515 15.336687,6.4099069 C 13.795203,9.1460858 12.684575,12.10558 12.046835,15.180663 l -0.09157,0.444752 H 5.1204889 L 5.5325378,14.814398 C 7.5268171,10.891846 10.693919,7.6881329 14.591074,5.6446731 Z m 15.474729,0 1.674358,0.8764216 c 3.897155,2.0434598 7.064257,5.2471729 9.058536,9.1697249 l 0.41205,0.811017 h -6.834781 l -0.09157,-0.444752 C 35.321018,12.10558 34.21039,9.1460858 32.668906,6.4099069 Z M 4.0282321,18.97413 h 7.4037999 l -0.04578,0.601722 c -0.111623,1.451108 -0.222376,2.885197 -0.222376,4.421351 0,1.536154 0.110746,2.970245 0.222376,4.421352 l 0.04578,0.601722 H 4.0282321 L 3.9235847,28.595147 C 3.5559658,27.091533 3.368377,25.551585 3.3545647,24.003744 v -0.0065 -0.0065 c 0.013813,-1.547841 0.2014011,-3.087789 0.56902,-4.591403 z m 10.7525159,0 h 7.547691 v 10.046147 h -7.547691 l -0.03924,-0.516697 c -0.111624,-1.451106 -0.228916,-2.917068 -0.228916,-4.506377 0,-1.589308 0.117297,-3.055269 0.228916,-4.506376 z m 10.896406,0 h 7.547691 l 0.03924,0.516697 c 0.111624,1.451107 0.228916,2.917068 0.228916,4.506376 0,1.589309 -0.117297,3.055271 -0.228916,4.506377 l -0.03924,0.516697 h -6.991752 -0.555939 z m 10.896407,0 h 7.4038 l 0.104647,0.42513 c 0.36762,1.503614 0.555213,3.043562 0.56902,4.591403 v 0.0065 0.0065 c -0.01381,1.547841 -0.2014,3.087789 -0.56902,4.591403 l -0.104647,0.42513 h -7.4038 l 0.04578,-0.601722 c 0.111623,-1.451107 0.222376,-2.885198 0.222376,-4.421352 0,-1.536154 -0.110758,-2.970243 -0.222376,-4.421351 z M 5.1204889,32.368992 h 6.8347801 l 0.09157,0.444752 c 0.63774,3.075084 1.748368,6.034577 3.289852,8.770756 l 0.928745,1.641655 -1.674358,-0.876421 C 10.693919,40.306275 7.5268171,37.102561 5.5325378,33.180009 Z m 10.2619821,0 H 21.7725 22.328439 V 44.481923 L 21.419315,43.742852 C 19.975207,42.564268 18.789179,41.101547 17.93325,39.44577 16.84255,37.435024 16.033276,35.281319 15.532901,33.0492 Z m 10.294683,0 h 6.945968 l -0.15043,0.680208 c -0.500375,2.232119 -1.309649,4.385824 -2.400349,6.39657 -0.855929,1.655777 -2.041957,3.118498 -3.486065,4.297082 l -0.909124,0.739071 z m 10.37317,0 h 6.834781 l -0.41205,0.811017 c -1.994279,3.922552 -5.161381,7.126266 -9.058536,9.169725 l -1.674358,0.876421 0.928745,-1.641655 c 1.541484,-2.736179 2.652112,-5.695672 3.289852,-8.770756 z"/>
+              </svg>
+            </td>
+            <td class="footer button" id="advanced" title="Open the custom useragents view: editor, saved strings and the page detection" data-i18n-title="tipOpenTheCustomUseragentsViewEditorSavedStringsAnd">
+              <svg width="14" height="14" viewBox="0 0 32 32">
+                <path d="M 7.9134109,0.23180074 C 5.9180109,0.23374515 4.1268622,1.4560202 3.3975943,3.3133821 H 0.31175049 V 6.840365 H 3.3848075 C 4.1089264,8.7104539 5.9080234,9.9431521 7.9134109,9.9432576 9.9172413,9.9413934 11.714195,8.7090025 12.437752,6.840365 H 31.70664 V 3.3133821 H 12.43349 C 11.703652,1.4545729 9.9103673,0.23199361 7.9134109,0.23180074 Z"/>
+                <path d="M 14.593847,11.191073 C 12.598446,11.193017 10.807298,12.415293 10.07803,14.272655 H 0.31175049 V 17.799638 H 10.065243 C 10.789362,19.669726 12.58846,20.902426 14.593847,20.90253 16.597677,20.900667 18.394632,19.668276 19.118188,17.799638 H 31.70664 V 14.272655 H 19.113926 C 18.384088,12.413845 16.590803,11.191266 14.593847,11.191073 Z"/>
+                <path d="M 24.104979,22.050543 C 26.100379,22.052487 27.891528,23.274763 28.620796,25.132125 H 31.70664 V 28.659108 H 28.633583 C 27.909464,30.529196 26.110366,31.761896 24.104979,31.762 22.101149,31.760136 20.304195,30.527745 19.580638,28.659108 H 0.31175049 V 25.132125 H 19.5849 C 20.314738,23.273316 22.108023,22.050737 24.104979,22.050543 Z"/>
+              </svg>
+            </td>
+            <td class="footer button" id="hardening" title="Open the hardening panel: anti-detection spoof rules" data-i18n-title="tipOpenTheHardeningPanelAntiDetectionSpoofRules">
+              <svg width="16" height="16" viewBox="0 0 512 512">
+                <path d="M 256.2172,246.23419 C 243.32969,246.23419 232.87371,256.68034 232.87371,269.57757 233.98259,339.85106 224.9564,407.59571 205.93146,475.34023 203.27626,484.79439 208.02278,504.99613 228.41906,504.99613 238.61235,504.99613 247.97887,498.2655 250.87734,487.95545 264.03723,441.35605 281.06825,365.97627 279.55085,269.57757 279.56056,256.69006 269.11442,246.23419 256.2172,246.23419 Z M 255.38074,166.74012 C 195.79665,166.67205 154.21606,212.52233 155.04282,265.06461 155.77237,311.69301 151.39549,358.35071 142.03868,403.71483 139.42222,416.33976 147.55349,428.70197 160.16868,431.299 172.86165,433.89587 185.13639,425.79377 187.75285,413.16884 197.80992,364.44928 202.50783,314.36779 201.72969,264.33505 201.33089,239.09506 221.10482,213.28103 254.69006,213.42696 285.14353,213.88408 310.27663,238.07377 310.73387,267.37947 311.48273,314.11494 308.00062,361.0741 300.41409,407.00239 298.30348,419.70507 306.92102,431.72694 319.63342,433.82785 339.05716,437.0668 345.71003,419.1409 346.45902,414.59865 354.51253,365.93739 358.18903,316.15751 357.42073,266.64992 356.56468,212.37653 310.79219,167.55714 255.38074,166.74012 Z M 147.71885,147.5012 C 137.70068,139.38936 123.0429,140.88721 114.88247,150.88594 89.963314,181.52425 76.570011,220.21606 77.192506,259.82196 77.766368,296.374 74.79009,333.03282 68.331725,368.80671 66.055751,381.49967 74.469106,393.63819 87.162102,395.9336 106.72189,399.33795 113.49155,381.52883 114.28914,377.10336 121.28248,338.35322 124.50186,298.64998 123.87936,259.09255 123.42225,230.02999 132.82766,202.79602 151.11334,180.33759 159.23489,170.33883 157.71761,155.64217 147.71885,147.5012 Z M 254.19407,86.876373 C 239.20567,86.477592 224.16853,88.276986 209.66643,91.710404 197.12911,94.686695 189.36748,107.25322 192.32428,119.8101 195.30051,132.34742 207.88656,140.07018 220.42386,137.15226 231.17159,134.61369 242.27926,133.48549 253.49381,133.56325 326.8602,134.66228 387.45585,193.38074 388.57448,264.46155 389.14822,301.30519 387.32949,338.48943 383.14714,374.98288 381.68811,387.79264 390.87962,399.37683 403.67951,400.83579 419.94218,402.73243 428.49168,389.28076 429.53242,380.30329 A 903.64367,903.64367 0 0 0 435.26133,263.73199 C 433.74392,167.6835 352.51857,88.335338 254.19407,86.876373 Z M 499.36824,205.00383 C 496.58639,192.43736 484.2825,184.38385 471.54093,187.23372 458.95489,190.01543 450.99871,202.46525 453.78042,215.06103 458.36155,235.88527 458.55609,251.44756 458.35184,274.97573 458.24478,287.88281 468.61316,298.40672 481.5008,298.51377 H 481.69519 C 494.50494,298.51377 504.93163,288.19399 505.03869,275.3648 505.2138,253.79158 505.42778,232.46162 499.36824,205.00383 Z M 460.3458,116.7657 C 412.978,49.273995 335.46816,8.2576457 252.99768,7.0223887 185.11696,6.2053689 122.33293,31.231476 75.636274,77.947513 30.534829,123.10739 6.2284787,183.09026 7.240027,246.90529 L 7.1233101,267.78798 C 6.7439781,280.67549 16.878923,291.43294 29.766441,291.80259 29.990152,291.82202 30.233304,291.82202 30.466746,291.82202 43.033287,291.82202 53.411384,281.8037 53.780991,269.15933 L 53.936622,246.16615 C 53.129326,195.10241 72.572456,147.09267 108.67701,110.96874 146.37654,73.230195 197.51819,52.931143 252.31688,53.718984 319.867,54.720801 383.36111,88.306161 422.15985,143.58143 429.56158,154.14433 444.10258,156.66347 454.66548,149.28119 465.20897,141.8696 467.75725,127.30917 460.3458,116.7657 Z"/>
+              </svg>
+            </td>
+            <td class="footsep"></td>
+            <td class="footer button" id="default" title="Switch to default useragent (Ctrl+Shift+D)" data-i18n-title="tipSwitchToDefaultUseragentCtrlShiftD">
+              <svg width="14" height="14" viewBox="0 0 96 96">
+                <path d="M 47.993139,5.0847538e-7 C 21.483458,0.0037622 -0.00381729,21.497183 5.0848951e-7,48.006862 0.00376274,74.51118 21.48882,95.996241 47.993139,95.999999 74.502818,96.003815 95.996233,74.516542 95.999999,48.006862 96.003815,21.491824 74.50818,-0.00381729 47.993139,5.0847538e-7 Z M 47.993139,18.141939 C 64.487496,18.139193 77.859504,31.511198 77.856756,48.005556 77.853362,64.495573 64.483157,77.86081 47.993139,77.858064 31.50312,77.86081 18.132914,64.495573 18.129522,48.005556 18.126777,31.511198 31.49878,18.139193 47.993139,18.141939 Z"/>
+              </svg>
+            </td>
+            <td class="footer button" id="check" title="What is my useragent?" data-i18n-title="tipWhatIsMyUseragent">
+              <svg width="14" height="14" viewBox="0 0 32 32">
+                <path d="M1 14 L5 10 L13 18 L27 4 L31 8 L13 26 z"/>
+              </svg> 
+            </td>
+            <td class="footer button" id="bug" title="Report bugs" data-i18n-title="tipReportBugs">
+              <svg width="14" height="14" viewBox="0 0 20 20">
+                <path d="M 15.154281,15.046308 17.848122,17.740149 A 0.97250579,0.97250579 0 0 1 17.848122,19.111382 0.97250579,0.97250579 0 0 1 16.476889,19.111382 L 13.958099,16.602317 A 5.8253097,5.8253097 0 0 1 10.972506,18.070801 V 9.3571499 A 0.9725059,0.9725059 0 0 0 9.0274942,9.3571499 V 18.070801 A 5.8155846,5.8155846 0 0 1 6.0419015,16.602317 L 3.5231115,19.111382 A 0.97250579,0.97250579 0 0 1 2.1518783,19.111382 0.97250579,0.97250579 0 0 1 2.1518783,17.740149 L 4.8457193,15.046308 A 5.7864094,5.7864094 0 0 1 4.2330407,13.208272 H 1.2474479 A 0.97250579,0.97250579 0 1 1 1.2474479,11.263261 H 4.1649653 V 8.744471 L 1.1793725,5.7588783 A 0.97250579,0.97250579 0 0 1 1.1793725,4.3876451 0.97250579,0.97250579 0 0 1 2.5506057,4.3876451 L 4.5928678,6.4299073 H 15.407132 L 17.449394,4.3876451 A 0.97250579,0.97250579 0 0 1 18.820627,4.3876451 0.97250579,0.97250579 0 0 1 18.820627,5.7588783 L 15.835035,8.744471 V 11.263261 H 18.752552 A 0.97250579,0.97250579 0 1 1 18.752552,13.208272 H 15.766959 C 15.669709,13.859851 15.455757,14.482255 15.154281,15.046308 Z M 14.862529,5.4282263 H 5.1374711 A 4.862529,4.862529 0 1 1 14.862529,5.4282263 Z"/>
+              </svg>              
+            </td>
+            <td class="footer button" id="settings-export" title="Export settings as a JSON file" data-i18n-title="tipExportSettingsAsAJSONFile">
+              <svg width="14" height="14" viewBox="0 0 128 128">
+                <path d="M 99.107143 7.0178571 L 99.107143 120.98214 L 120.16071 120.98214 L 120.16071 7.0178571 L 99.107143 7.0178571 z M 47.678571 27.821429 L 8.1428571 64 L 47.678571 100.17857 L 47.678571 75.517857 L 90.928571 75.517857 L 90.928571 52.482143 L 47.678571 52.482143 L 47.678571 27.821429 z"/>
+              </svg>
+            </td>
+            <td class="footer button" id="settings-import" title="Import settings from a JSON file" data-i18n-title="tipImportSettingsFromAJSONFile">
+              <svg width="14" height="14" viewBox="0 0 128 128">
+                <path d="M 99.107143 7.0178571 L 99.107143 120.98214 L 120.16071 120.98214 L 120.16071 7.0178571 L 99.107143 7.0178571 z M 51.392857 27.821429 L 51.392857 52.482143 L 8.1428571 52.482143 L 8.1428571 75.517857 L 51.392857 75.517857 L 51.392857 100.17857 L 90.928571 64 L 51.392857 27.821429 z"/>
+              </svg>
+            </td>
+            <td class="footer button" id="settings-reset" title="Factory reset: clears all settings, rules and the toolbar icon state" data-i18n-title="tipFactoryResetClearsAllSettingsRulesAndTheToolbar">
+              <svg width="14" height="14" viewBox="0 0 48 48">
+                <path d="M 9.8212753,13.365952 H 34.12766 V 20.455317 L 44.25532,10.327657 34.12766,0.199997 V 7.2893585 H 3.744681 V 22.987232 H 9.8212753 Z"/>
+                <path d="M 38.178723,34.634044 13.872338,34.634037 13.872339,27.544678 3.744681,37.672337 13.872339,47.8 13.87234,40.710639 44.255317,40.710637 44.255318,25.012763 38.178724,25.012764 Z"/>
+              </svg>
+            </td>
+            <td class="footsep"></td>
+            <td class="footer button" id="reload" title="Reload current tab" data-i18n-title="tipReloadCurrentTab">
+              <svg width="14" height="14" viewBox="0 0 512 512">
+                <path d="M281.525,228.102l104.758-78.042 c12.082-12.085,12.082-24.259,0-36.342L281.525,35.674c-3.274-2.359-7.359-3.725-11.723-3.725c-10.992,0-19.803,8.536-19.803,19.083  v35.429C144.611,86.737,59.205,172.046,59.205,277.258c0,105.396,85.672,190.793,191.248,190.793 c98.03,0,178.809-73.498,189.977-168.169c0.092-0.275,0.367-3.187,0.367-4.455c0-9.992-8.181-18.169-18.261-18.169h-45.793 c-14.993,0-26.349,10.355-27.893,18.986c-8.811,46.156-49.519,80.954-98.397,80.954c-55.329,0-100.127-44.701-100.127-99.94 c0-55.064,44.523-99.667,99.674-99.941v35.437c0,10.541,8.811,19.076,19.803,19.076C274.166,231.83,278.251,230.471,281.525,228.102 z"/>
+              </svg>
+            </td>
+            <td class="footer button" id="theme" title="Dark | Light mode" data-i18n-title="tipDarkLightMode">
+              <svg width="13" height="13" viewBox="0 0 122.8799 122.8799">
+                <path d="M 63.550085,1.4875858 A 60.101027,60.101027 0 0 0 3.45,61.587666 60.101027,60.101027 0 0 0 63.550085,121.6899 60.101027,60.101027 0 0 0 119.56373,83.196612 50.463617,50.463617 0 0 1 102.0998,86.352622 50.463617,50.463617 0 0 1 51.637166,35.887862 50.463617,50.463617 0 0 1 65.189815,1.5691534 60.101027,60.101027 0 0 0 63.550085,1.4875858 Z"/>
+              </svg>						
+            </td>    
+            <td class="footer button" id="faq" title="Open support page (FAQ)" data-i18n-title="tipOpenSupportPageFAQ">
+              <svg width="14" height="14" viewBox="0 0 1792 1792">
+                <path d="M1088 1256v240q0 16-12 28t-28 12h-240q-16 0-28-12t-12-28v-240q0-16 12-28t28-12h240q16 0 28 12t12 28zm316-600q0 54-15.5 101t-35 76.5-55 59.5-57.5 43.5-61 35.5q-41 23-68.5 65t-27.5 67q0 17-12 32.5t-28 15.5h-240q-15 0-25.5-18.5t-10.5-37.5v-45q0-83 65-156.5t143-108.5q59-27 84-56t25-76q0-42-46.5-74t-107.5-32q-65 0-108 29-35 25-107 115-13 16-31 16-12 0-25-8l-164-125q-13-10-15.5-25t5.5-28q160-266 464-266 80 0 161 31t146 83 106 127.5 41 158.5z"/>
+              </svg>              
+            </td>
+            <td class="footer button" id="donation" title="Make a donation" data-i18n-title="tipMakeADonation">
+              <svg width="14" height="14" viewBox="-0.709 -11.555 141.732 141.732">
+                <path d="M140.314,37.654C140.314,16.858,123.402,0,102.537,0c-13.744,0-25.77,7.317-32.379,18.255C63.549,7.317,51.521,0,37.777,0 C16.912,0,0,16.858,0,37.654c0,10.821,4.588,20.57,11.922,27.438h-0.01l54.084,51.584c0.992,1.188,2.48,1.945,4.148,1.945 c1.545,0,2.936-0.653,3.92-1.696l54.346-51.833h-0.016C135.729,58.225,140.314,48.476,140.314,37.654"/>
+              </svg>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="explore"></div>
+    <!-- -->
+    <input type="file" id="importfile" accept=".json,application/json">
+    <!-- -->
+    <script type="text/javascript" src="explore/explore.js" defer></script>
+    <script type="text/javascript" src="i18n.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+    <script type="text/javascript" src="sections/readout.js"></script>
+    <script type="text/javascript" src="sections/settings.js"></script>
+    <script type="text/javascript" src="sections/hardening.js"></script>
+    <script type="text/javascript" src="sections/advanced.js"></script>
+    <script type="text/javascript" src="sections/domains.js"></script>
+    <script type="text/javascript" src="sections/library.js"></script>
+  </body>
+</html>

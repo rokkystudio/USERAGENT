@@ -1,0 +1,360 @@
+html {
+  overflow: hidden;
+}
+
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 790px;
+  height: 514px;
+  display: flex;
+  font-size: 13px;
+  overflow: hidden;
+  min-height: 514px;
+  max-height: 514px;
+  user-select: none;
+  position: relative;
+  box-sizing: border-box;
+  background-color: #fff;
+  flex-direction: column;
+  font-family: system-ui, sans-serif;
+}
+
+body:has(#explore[data-loaded='true']) {
+  height: 564px;
+  min-height: 564px;
+  max-height: 564px;
+}
+
+table {
+  width: 100%;
+  margin: auto;
+  empty-cells: show;
+  table-layout: fixed;
+  border-spacing: 5px 0;
+}
+
+table tr td {
+  border: 0;
+  padding: 0;
+  height: 78px;
+  transition: 300ms ease all;
+  font-family: system-ui, sans-serif;
+  border: solid 1px rgba(0, 0, 0, 0.05);
+}
+
+table tr td[type='selected'] {
+  position: relative;
+  border: solid 1px #8d8d8d;
+}
+
+table tr td[type='selected']:before {
+  top: 3px;
+  left: 9px;
+  color: #555;
+  content: '✓';
+  font-size: 16px;
+  font-weight: 600;
+  position: absolute;
+  font-family: monospace;
+}
+
+table tr td.separator {
+  border: 0;
+  padding: 0;
+  height: 5px;
+  display: none;
+}
+
+/* the whole separator row collapses: a row of hidden cells still earns
+   its border-spacing slot, which showed as phantom gaps */
+table tr:has(td.separator) {
+  display: none;
+}
+
+#section-1 table tr td[id]:not([type='selected']):hover, 
+#section-2 table tr td[id]:not([type='selected']):hover {
+  cursor: pointer;
+  border: solid 1px rgb(214, 214, 214);
+}
+
+#footer {
+  height: 100%;
+  table-layout: auto;
+  border-spacing: 5px;
+}
+
+/* the main strips sit in their own natural-height tables: when a stretched
+   table gets more height than its rows, the leftover is shared with every
+   row, which inflated these exact 28px strips to ~35px; the data tables
+   keep their stretch and absorb the whole share into the matrix cells */
+
+
+#desktop-browsers {
+  padding-bottom: 15px;
+}
+
+#mobile-browsers-head,
+#desktop-browsers-head,
+#operating-systems-head {
+  border-spacing: 5px;
+}
+
+#section-1,
+#section-2,
+#section-3,
+#section-4,
+#section-7 {
+  border: 0;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* the footer is frozen to the bottom edge in every tab: flex pins it
+   after the open panel, which absorbs all remaining space above it */
+#section-3 {
+  flex: 0 0 auto;
+}
+
+/* the status strip holds live text (config lines, rule problems), so long
+   strings may never wrap it past its one 28px line: the rest truncates */
+
+#status-td {
+  height: 28px;
+  min-height: 28px;
+  max-height: 28px;
+  overflow: hidden;
+  max-width: 780px;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+/* the wrapper takes the clipping duties: a table cell ignores max-height
+   and grows with content, so the tall band caps and scrolls inside the
+   inner block instead */
+
+#status-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* the settings tab can restyle the status strip: tall and the plain look
+   ride a composed type attribute, hide wins over both, so the default
+   stays the small one-line strip exactly as before */
+
+#status-td[type~='tall'] {
+  height: 56px;
+  min-height: 56px;
+  max-height: 56px;
+  box-shadow: unset;
+  white-space: normal;
+}
+
+#status-td[type~='tall'] #status-text {
+  text-indent: 0;
+  max-height: 56px;
+  overflow-y: auto;
+  line-height: 20px;
+  padding: 5px 10px;
+  text-align: justify;
+  box-sizing: border-box;
+}
+
+#status-td[type~='plain'] {
+  color: #333;
+  background-color: unset;
+  border: solid 1px rgba(0, 0, 0, 0.1) !important;
+}
+
+#status-td[type~='hide'] {
+  display: none;
+}
+
+#section-1,
+#section-2,
+#section-4,
+#section-5,
+#section-6,
+#section-7 {
+  flex: 1 1 auto;
+  overflow: hidden;
+  min-height: 138px;
+}
+
+#url {
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  color: #333;
+  height: 38px;
+  font-size: 14px;
+  text-indent: 10px;
+  vertical-align: middle;
+  background-color: #fff;
+  font-family: monospace;
+  box-sizing: border-box;
+  width: calc(100% - 28px);
+  border: solid 1px rgba(0, 0, 0, 0.25);
+}
+
+.button {
+  margin: 0;
+  padding: 0;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  cursor: pointer;
+  transition: 300ms ease all;
+  border: solid 1px rgba(0, 0, 0, 0.05);
+}
+
+.button svg {
+  fill: #555;
+  margin-top: -3px;
+  pointer-events: none;
+  vertical-align: middle;
+}
+
+.button:hover {
+  border: solid 1px #8d8d8d;
+}
+
+/* the two wide gaps split the footer into views | actions | utility, the
+   plain gap keeps the strip as quiet as the hidden separator rows */
+
+#footer tr td.footsep {
+  border: 0;
+  width: 100%;
+  height: 42px;
+  min-width: 20px;
+  position: relative;
+}
+
+#footer tr td.footsep:before {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  content: '';
+  height: 100%;
+  position: absolute;
+  background: rgb(0 0 0 / 15%);
+}
+
+.description {
+  height: 28px;
+  font-size: 13px;
+  text-align: left;
+  font-weight: 600;
+  user-select: none;
+  text-indent: 10px;
+  line-height: 28px;
+  border: 0 !important;
+  cursor: default !important;
+  color: var(--description-fg, #fff);
+  font-family: system-ui, sans-serif;
+  background-color: var(--description-bg, #6d6d6d);
+  box-shadow: 0 14px 0 rgb(255 255 255 / 15%) inset;
+}
+
+.userinput {
+  padding: 0;
+  height: 48px;
+  min-height: 48px;
+  max-height: 48px;
+  text-align: center;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#ios {background: url('./icons/32/ios.png') no-repeat center center}
+#tizen {background: url('./icons/32/tizen.png') no-repeat center center}
+#android {background: url('./icons/32/android.png') no-repeat center center}
+#symbian {background: url('./icons/32/symbian.png') no-repeat center center}
+#windowsp {background: url('./icons/32/windowsp.png') no-repeat center center}
+#firefoxos {background: url('./icons/32/firefoxos.png') no-repeat center center}
+
+#edge {background: url('./icons/32/edge.png') no-repeat center center}
+#opera {background: url('./icons/32/opera.png') no-repeat center center}
+#chrome {background: url('./icons/32/chrome.png') no-repeat center center}
+#safari {background: url('./icons/32/safari.png') no-repeat center center}
+#firefox {background: url('./icons/32/firefox.png') no-repeat center center}
+#explorer {background: url('./icons/32/explorer.png') no-repeat center center}
+
+#mac {background: url('./icons/32/mac.png') no-repeat center center}
+#ibm {background: url('./icons/32/ibm.png') no-repeat center center}
+#linux {background: url('./icons/32/linux.png') no-repeat center center}
+#freebsd {background: url('./icons/32/freebsd.png') no-repeat center center}
+#windowsd {background: url('./icons/32/windowsd.png') no-repeat center center}
+#chromeOS {background: url('./icons/32/chromeOS.png') no-repeat center center}
+
+html[theme='dark'] html,
+html[theme='dark'] body {
+  color: #ebebeb;
+  color-scheme: dark;
+  background-color: #1e1e1e;
+}
+
+html[theme='dark'] #url {
+  color: #ebebeb;
+  background-color: #1e1e1e;
+}
+
+html[theme='dark'] .description {
+  background-color: var(--description-bg, #434343);
+  box-shadow: 0 14px 0 rgb(101 101 101 / 65%) inset;
+}
+
+html[theme='dark'] #status-td[type~='tall'] {
+  box-shadow: 0 28px 0 rgb(101 101 101 / 65%) inset;
+}
+
+html[theme='dark'] #status-td[type~='plain'] {
+  color: #ebebeb;
+  border: solid 1px rgb(255 255 255 / 10%) !important;
+}
+
+html[theme='dark'] #explore a:hover,
+html[theme='dark'] #explore .explore:hover {
+  background-color: rgba(255 255 255 / 10%);
+}
+
+html[theme='dark'] #explore .explore {
+  color: #a5a5a5;
+}
+
+html[theme='dark'] #explore,
+html[theme='dark'] #explore a,
+html[theme='dark'] table tr td[type='selected']::before {
+  color: #ebebeb;
+}
+
+html[theme='dark'] #url,
+html[theme='dark'] table tr td[type='selected'] {
+  border-color: rgb(255 255 255 / 25%);
+}
+
+html[theme='dark'] table tr td {
+  border-color: rgb(255 255 255 / 10%);
+}
+
+html[theme='dark'] .button svg {
+  fill: #ebebeb;
+}
+
+html[theme='dark'] #ibm {
+  filter: invert(1);
+  border-color: rgb(0 0 0 / 25%);
+}
+
+html[theme='dark'] #ibm:hover,
+html[theme='dark'] #ibm[type='selected'] {
+  border-color: rgb(0 0 0 / 65%) !important;
+}
+
+html[theme='dark'] #ibm[type='selected']::before {
+  color: #0e0e0e;
+}

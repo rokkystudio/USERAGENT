@@ -1,0 +1,614 @@
+{
+  "extensionName": {
+    "message": "User-Agent Switcher"
+  },
+  "extensionDescription": {
+    "message": "Switch between browser User-Agent profiles from the toolbar."
+  },
+  "extensionTitle": {
+    "message": "User-Agent Switcher"
+  },
+  "commandToggleDefault": {
+    "message": "Switch to the default User-Agent"
+  },
+  "uiMobileDevice": {
+    "message": "Mobile Device"
+  },
+  "uiDesktopBrowser": {
+    "message": "Desktop Browser"
+  },
+  "uiOperatingSystem": {
+    "message": "Operating System"
+  },
+  "uiSettings": {
+    "message": "Settings"
+  },
+  "uiApplyUseragentsTo": {
+    "message": "Apply useragents to"
+  },
+  "uiActiveTabOnly": {
+    "message": "Active tab only"
+  },
+  "uiAllTabs": {
+    "message": "All tabs"
+  },
+  "uiCompleteSpoof": {
+    "message": "Complete spoof"
+  },
+  "uiFullRequestCoverage": {
+    "message": "Full request coverage"
+  },
+  "uiLiveApplyToOpenTabs": {
+    "message": "Live apply to open tabs"
+  },
+  "uiConfirmBeforeDefault": {
+    "message": "Confirm before Default"
+  },
+  "uiConfirmBeforeReset": {
+    "message": "Confirm before Reset"
+  },
+  "uiShowBackButtons": {
+    "message": "Show back buttons"
+  },
+  "uiRememberLastView": {
+    "message": "Remember last view"
+  },
+  "uiRealVendorPassthrough": {
+    "message": "Real vendor passthrough"
+  },
+  "uiStrictUACleanup": {
+    "message": "Strict UA cleanup"
+  },
+  "uiHeaderColor": {
+    "message": "Header color"
+  },
+  "uiStatusRow": {
+    "message": "Status row"
+  },
+  "uiTall": {
+    "message": "Tall"
+  },
+  "uiShort": {
+    "message": "Short"
+  },
+  "uiPlain": {
+    "message": "Plain"
+  },
+  "uiCustomUseragents": {
+    "message": "Custom useragents"
+  },
+  "uiThisTabModeIsOnPicksBelowApplyTo": {
+    "message": "This-tab mode is on — picks below apply to this tab only"
+  },
+  "uiDefaultUseragent": {
+    "message": "default useragent"
+  },
+  "uiSavedUseragents": {
+    "message": "Saved useragents"
+  },
+  "uiDetectedUseragent": {
+    "message": "Detected useragent"
+  },
+  "uiCustomDomains": {
+    "message": "Custom domains"
+  },
+  "uiThisTabModeIsOnPicksIgnoreTheDomain": {
+    "message": "This-tab mode is on — picks ignore the domain scope"
+  },
+  "uiGlobalScope": {
+    "message": "Global scope"
+  },
+  "uiExclusive": {
+    "message": "Exclusive"
+  },
+  "uiInclusive": {
+    "message": "Inclusive"
+  },
+  "uiTheUseragentAppliesOnlyOnTheDomainsInThe": {
+    "message": "— the useragent applies only on the domains in the list below"
+  },
+  "uiTheUseragentAppliesOnEverySiteExceptTheDomains": {
+    "message": "— the useragent applies on every site except the domains in the list below"
+  },
+  "uiDomainList": {
+    "message": "Domain list"
+  },
+  "uiHardeningRules": {
+    "message": "Hardening rules"
+  },
+  "uiNativeDisguisingCodeReadsBackAsBuiltIn": {
+    "message": "Native disguising (code reads back as built-in)"
+  },
+  "uiComputedClientHintsBrandListFitsTheFake": {
+    "message": "Computed client hints (brand list fits the fake)"
+  },
+  "uiRichEntropyDetailsModelAndFormFactors": {
+    "message": "Rich entropy details (model and form factors)"
+  },
+  "uiRealHighEntropyValuesRevealsThisMachine": {
+    "message": "Real high-entropy values (reveals this machine)"
+  },
+  "uiDeleteBrowserLeftoversRemovesForeignFields": {
+    "message": "Delete browser leftovers (removes foreign fields)"
+  },
+  "uiShortAppVersionFirefoxForm": {
+    "message": "Short appVersion (Firefox form)"
+  },
+  "uiForgedToStringChangedCodeHides": {
+    "message": "Forged toString (changed code hides)"
+  },
+  "uiPinDeviceSpecsFakeCoresMemory": {
+    "message": "Pin device specs (fake cores & memory)"
+  },
+  "uiHideAutomationFlagBotBadgeOff": {
+    "message": "Hide automation flag (bot badge off)"
+  },
+  "uiEchoGuardUAEchoesAnswerTheFake": {
+    "message": "Echo guard (UA echoes answer the fake)"
+  },
+  "uiIframeRules": {
+    "message": "Iframe rules"
+  },
+  "uiFirstPaintSpoofFakeShipsEarly": {
+    "message": "First-paint spoof (fake ships early)"
+  },
+  "uiSpoofIframesBoxesGetTheFake": {
+    "message": "Spoof iframes (boxes get the fake)"
+  },
+  "uiSpoofSandboxedIframesLockedBoxesToo": {
+    "message": "Spoof sandboxed iframes (locked boxes too)"
+  },
+  "uiDebugTraceFakeVisibleToPages": {
+    "message": "Debug trace (fake visible to pages)"
+  },
+  "uiMatchedLanguage": {
+    "message": "Matched language"
+  },
+  "uiMatchBrowserLanguageLanguageFollowsFake": {
+    "message": "Match browser language (language follows fake)"
+  },
+  "uiThisTabModeIsOnChangesApplyToThis": {
+    "message": "This-tab mode is on — changes apply to this tab only"
+  },
+  "uiUserAgentSwitcher": {
+    "message": "UserAgent Switcher"
+  },
+  "tipAppleIOSIPhone": {
+    "message": "Apple iOS (iPhone)"
+  },
+  "tipGoogleAndroid": {
+    "message": "Google Android"
+  },
+  "tipMicrosoftWindowsPhone": {
+    "message": "Microsoft Windows Phone"
+  },
+  "tipSamsungTizenOS": {
+    "message": "Samsung Tizen OS"
+  },
+  "tipNokiaSymbian": {
+    "message": "Nokia Symbian"
+  },
+  "tipMozillaFirefoxOS": {
+    "message": "Mozilla Firefox OS"
+  },
+  "tipGoogleChrome": {
+    "message": "Google Chrome"
+  },
+  "tipOpera": {
+    "message": "Opera"
+  },
+  "tipMozillaFirefox": {
+    "message": "Mozilla Firefox"
+  },
+  "tipAppleSafari": {
+    "message": "Apple Safari"
+  },
+  "tipMicrosoftEdge": {
+    "message": "Microsoft Edge"
+  },
+  "tipMicrosoftExplorer": {
+    "message": "Microsoft Explorer"
+  },
+  "tipMicrosoftWindows": {
+    "message": "Microsoft Windows"
+  },
+  "tipAppleMacOS": {
+    "message": "Apple Mac-OS"
+  },
+  "tipLinux": {
+    "message": "Linux"
+  },
+  "tipGoogleChromeOS": {
+    "message": "Google Chrome-OS"
+  },
+  "tipIBMWarpOS2": {
+    "message": "IBM Warp OS/2"
+  },
+  "tipFreeBSDOS": {
+    "message": "FreeBSD OS"
+  },
+  "tipGoBackToTheMainView": {
+    "message": "Go back to the main view"
+  },
+  "tipChooseWherePickedUseragentsAreAppliedToEveryTab": {
+    "message": "Choose where picked useragents are applied: to every tab, or to the tab you have open only"
+  },
+  "tipPickedUseragentsApplyToThisTabOnlyOtherTabs": {
+    "message": "Picked useragents apply to this tab only — other tabs keep the default useragent"
+  },
+  "tipPickedUseragentsApplyToEveryTab": {
+    "message": "Picked useragents apply to every tab"
+  },
+  "tipAlsoFakesTheClientHintHeadersAndTheJS": {
+    "message": "Also fakes the client-hint headers and the JS client-hint APIs so modern sites cannot see through the switch"
+  },
+  "tipFakeSecCHUAHeadersNavigatorUserAgentDataPlatformAnd": {
+    "message": "Fake Sec-CH-UA headers, navigator.userAgentData, platform and vendor too"
+  },
+  "tipAlsoSendsTheFakeUAOnPageFetchesAJAX": {
+    "message": "Also sends the fake UA on page fetches, AJAX requests and websockets, not only page loads and iframes"
+  },
+  "tipFakeUAOnAllRequestTypes": {
+    "message": "Fake UA on all request types"
+  },
+  "tipOpenTabsPickUpAUseragentSwitchImmediatelyWithout": {
+    "message": "Open tabs pick up a useragent switch immediately, without a page reload"
+  },
+  "tipApplySwitchesToOpenTabsInstantly": {
+    "message": "Apply switches to open tabs instantly"
+  },
+  "tipAsksBeforeSwitchingBackToTheDefaultUseragent": {
+    "message": "Asks before switching back to the default useragent"
+  },
+  "tipAskForConfirmationBeforeSwitchingToTheDefaultUseragent": {
+    "message": "Ask for confirmation before switching to the default useragent"
+  },
+  "tipAsksBeforeTheFactoryResetClearsAllSettingsRules": {
+    "message": "Asks before the factory reset clears all settings, rules and the toolbar icon state"
+  },
+  "tipAskForConfirmationBeforeTheFactoryReset": {
+    "message": "Ask for confirmation before the factory reset"
+  },
+  "tipShowTheBackArrowInTheHeaderOfThe": {
+    "message": "Show the back arrow in the header of the settings, custom useragents and custom domains tabs — the home button in the footer already returns to the main view"
+  },
+  "tipShowTheBackArrowInThePanelHeaders": {
+    "message": "Show the back arrow in the panel headers"
+  },
+  "tipThePopupReopensOnTheViewThatWasOpen": {
+    "message": "The popup reopens on the view that was open when it closed — settings, custom useragents or custom domains; off always starts on the main view"
+  },
+  "tipReopenThePopupOnTheLastOpenView": {
+    "message": "Reopen the popup on the last open view"
+  },
+  "tipWhenTheFakeBrowserHasNoVendorOfIts": {
+    "message": "When the fake browser has no vendor of its own (Firefox and friends), keep this browser's real vendor visible — useful only on sites that trust their own engine's vendor; off keeps the disguise complete"
+  },
+  "tipKeepTheRealVendorVisibleWhenTheFakeBrowser": {
+    "message": "Keep the real vendor visible when the fake browser sends none"
+  },
+  "tipCleansPastedSavedAndImportedUseragentStringsBeforeThe": {
+    "message": "Cleans pasted, saved and imported useragent strings before the rules engine sees them: printable characters only, no line breaks, capped at 512 — a broken string can no longer disable switching; off hands strings over untouched"
+  },
+  "tipCleanPastedAndImportedStringsBeforeTheEngineApplies": {
+    "message": "Clean pasted and imported strings before the engine applies them"
+  },
+  "tipTintsTheDescriptionHeaderStripsTheBackArrowsAnd": {
+    "message": "Tints the description header strips, the back arrows and the active mode chips in every tab, including the footer status line"
+  },
+  "tipReturnTheHeaderColorToTheThemeDefault": {
+    "message": "Return the header color to the theme default"
+  },
+  "tipPickTheColorOfTheDescriptionHeaderStrips": {
+    "message": "Pick the color of the description header strips"
+  },
+  "tipTheFooterStatusStripTallOrShortHeightAnd": {
+    "message": "The footer status strip: tall or short height and plain coloring on the left, and the checkbox on the right shows or hides the strip entirely"
+  },
+  "tipTallerStripWithTheInnerShineOfTheSettings": {
+    "message": "Taller strip with the inner shine of the settings rows"
+  },
+  "tipSmallOneLineStripDefault": {
+    "message": "Small one-line strip (default)"
+  },
+  "tipStripTheBackgroundColorPlainCellWithAThin": {
+    "message": "Strip the background color: plain cell with a thin border — composes with tall or short"
+  },
+  "tipShowTheFooterStatusStrip": {
+    "message": "Show the footer status strip"
+  },
+  "tipTypeOrPasteAUseragentStringThenApplyIt": {
+    "message": "Type or paste a useragent string, then apply it or save it to the list below"
+  },
+  "tipTypeOrPasteAUseragentString": {
+    "message": "Type or paste a useragent string"
+  },
+  "tipApplyThisUseragentToEveryTabOrToThis": {
+    "message": "Apply this useragent — to every tab, or to this tab only, as chosen in Settings"
+  },
+  "tipSaveThisStringToTheSavedUseragentsListBelow": {
+    "message": "Save this string to the saved useragents list below"
+  },
+  "tipTheUseragentOverrideCurrentlyAppliedToThisTabBy": {
+    "message": "The useragent override currently applied to this tab by This-tab mode"
+  },
+  "tipRemoveThisTabSUseragentOverrideTheTabReturns": {
+    "message": "Remove this tab's useragent override — the tab returns to the global useragent"
+  },
+  "tipSavedUseragentStringsApplyTheSelectedOneLoadIt": {
+    "message": "Saved useragent strings: apply the selected one, load it into the editor, or remove it"
+  },
+  "tipPickASavedUseragentString": {
+    "message": "Pick a saved useragent string"
+  },
+  "tipApplyTheSelectedStringToEveryTabOrTo": {
+    "message": "Apply the selected string — to every tab, or to this tab only, as chosen in Settings"
+  },
+  "tipLoadTheSelectedStringIntoTheEditorAbove": {
+    "message": "Load the selected string into the editor above"
+  },
+  "tipRemoveTheSelectedSavedString": {
+    "message": "Remove the selected saved string"
+  },
+  "tipWhatThisPageCurrentlyReportsAsItsUseragentUse": {
+    "message": "What this page currently reports as its useragent — use it to check that your switch took effect"
+  },
+  "tipCopyTheDetectedUseragentToTheClipboard": {
+    "message": "Copy the detected useragent to the clipboard"
+  },
+  "tipChooseWhetherTheUseragentAppliesOnlyOnTheListed": {
+    "message": "Choose whether the useragent applies only on the listed domains, or on every site except the listed ones"
+  },
+  "tipExclusiveTheUseragentAppliesOnEverySiteExceptThe": {
+    "message": "Exclusive: the useragent applies on every site except the domains in the list below"
+  },
+  "tipInclusiveTheUseragentAppliesOnlyOnTheDomainsIn": {
+    "message": "Inclusive: the useragent applies only on the domains in the list below"
+  },
+  "tipOneDomainPerLineYahooComGoogleComOr": {
+    "message": "One domain per line: yahoo.com, google.com — or all_urls for every site"
+  },
+  "tipIEYahooComWwwGoogleComOrAll": {
+    "message": "i.e. yahoo.com\nwww.google.com\nor all_urls"
+  },
+  "tipMakesTheFakeSurviveTheReadBackChecksReading": {
+    "message": "Use Chromium's real NavigatorUAData instance. The selected profile supplies the public values while native methods retain valid receiver checks."
+  },
+  "tipTheFakeSurvivesTheClassicReadBackChecks": {
+    "message": "Native NavigatorUAData instance with profile-aware values"
+  },
+  "tipBuildsTheSmallBrandListChromeItselfWouldSend": {
+    "message": "Builds the small brand list Chrome itself would send for the faked version, instead of the fixed list most spoofers carry; off restores the fixed list"
+  },
+  "tipBrandListAndOrderDeriveFromTheFakedVersion": {
+    "message": "Brand list and order derive from the faked version"
+  },
+  "tipCoreHighEntropyValuesAlwaysStayConsistentWithThe": {
+    "message": "Core high-entropy values always stay consistent with the selected Chromium profile; this option additionally exposes model and form-factor details"
+  },
+  "tipAddModelAndFormFactorDetailsToTheConsistent": {
+    "message": "Add model and form-factor details to the consistent core values"
+  },
+  "tipSitesThatAskForExtraBrowserDetailsGetThe": {
+    "message": "Sites that ask for extra browser details get the REAL machine's answers — useful when a page may see through the fake on purpose; off keeps every detail consistent with the fake"
+  },
+  "tipExtraDetailsAnswerThisMachineRevealsTheFake": {
+    "message": "Extra details answer this machine (reveals the fake)"
+  },
+  "tipRemovesBrowserPropertiesTheFakedBrowserShouldNotHave": {
+    "message": "Removes browser properties the faked browser should not have (a fake Chrome answers nothing for Firefox-only fields, a fake Firefox hides the Chrome button); off leaves the extras in place"
+  },
+  "tipExtrasTheFakedFamilyWouldNotHaveGetRemoved": {
+    "message": "Extras the faked family would not have get removed"
+  },
+  "tipAFakeFirefoxReportsTheShortVersionStringThe": {
+    "message": "A fake Firefox reports the short version string the real Firefox uses (a long, Chrome-shaped string would give the fake away); off keeps the long string everywhere"
+  },
+  "tipFirefoxFakesUseTheShortVersionString": {
+    "message": "Firefox fakes use the short version string"
+  },
+  "tipSitesCanInspectTheCodeBehindAChangedProperty": {
+    "message": "Sites can inspect the code behind a changed property — this makes our code answer like the browser's built-in code; off exposes our code to anyone who looks closely (testing aid)"
+  },
+  "tipChangedCodeAnswersLikeBuiltInCode": {
+    "message": "Changed code answers like built-in code"
+  },
+  "tipSitesCanAskHowManyCPUCoresAndHow": {
+    "message": "Sites can ask how many CPU cores and how much memory the device has — the fake answers with fixed, believable numbers instead of yours; off passes the real numbers through"
+  },
+  "tipCoresAndMemoryAnswerFixedFakeNumbers": {
+    "message": "Cores and memory answer fixed fake numbers"
+  },
+  "tipSitesThatRunAutomationToolsBotsTestDriversCarry": {
+    "message": "Sites that run automation tools (bots, test drivers) carry a flag pages read — this answers false while the fake is on, like a normal session; off passes the real flag through"
+  },
+  "tipTheAutomationFlagAnswersFalseWhileTheFakeIs": {
+    "message": "The automation flag answers false while the fake is on"
+  },
+  "tipAPageAnswerWhoseTextIsExactlyThisBrowser": {
+    "message": "A page answer whose text is exactly this browser's real identity readback is a test trap — this switch lets such a page-level echo report the fake instead; off hands the real string through, and any other page text is never touched"
+  },
+  "tipAPageAnswerThatIsExactlyTheRealIdentity": {
+    "message": "A page answer that is exactly the real identity reads as the fake"
+  },
+  "tipSitesRunPartsOfTheirPageInHiddenBoxes": {
+    "message": "Sites run parts of their page in hidden boxes before our script can arrive there — this switch sends the fake ahead of time in the page's answer, so even their first script reads it; off uses the slower round trip"
+  },
+  "tipEveryFrameReportsTheFakeBeforeItsFirstScript": {
+    "message": "Every frame reports the fake before its first script runs"
+  },
+  "tipHiddenBoxesOnAPageReportTheFakeLike": {
+    "message": "Hidden boxes on a page report the fake like the main page; off narrows everything to the main page only, so no layer contradicts another"
+  },
+  "tipFramesOfTheTabCarryTheFakeToo": {
+    "message": "Frames of the tab carry the fake too"
+  },
+  "tipSitesBuildLockedBoxesAndReadTheIdentityInside": {
+    "message": "Sites build locked boxes and read the identity inside them the moment the box is created; this switch hands the fake over inside that create action itself; off leaves locked boxes untouched"
+  },
+  "tipLockedFramesGetTheFakeTheMomentTheyAre": {
+    "message": "Locked frames get the fake the moment they are built"
+  },
+  "tipNormallyTheFakeTravelsInvisiblyThisDebugSwitchLeaves": {
+    "message": "Normally the fake travels invisibly; this debug switch leaves its trace readable in the browser's timeline for checking — keep it off for daily use"
+  },
+  "tipTheServerTimingPayloadStaysReadableTestingAid": {
+    "message": "The Server-Timing payload stays readable (testing aid)"
+  },
+  "tipTheFakeSpeaksTheLanguageListBelowPagesGet": {
+    "message": "The fake speaks the language list below: pages get the chosen language instead of this browser's real one; off leaves language untouched — a language switch is visible on every page"
+  },
+  "tipLanguageHeaderAndNavigatorLanguagesMoveTogether": {
+    "message": "Language header and navigator.languages move together"
+  },
+  "tipTheLanguageListUsedWhenMatchLanguageIsOn": {
+    "message": "The language list used when match-language is on: comma separated in order of importance, first entry is the main language (en-US, en); up to eight entries"
+  },
+  "tipShowTheMainUseragentView": {
+    "message": "Show the main useragent view"
+  },
+  "tipOpenTheSettingsPanel": {
+    "message": "Open the settings panel"
+  },
+  "tipOpenTheCustomDomainsViewWhereTheGlobalUseragent": {
+    "message": "Open the custom domains view: where the global useragent applies"
+  },
+  "tipOpenTheCustomUseragentsViewEditorSavedStringsAnd": {
+    "message": "Open the custom useragents view: editor, saved strings and the page detection"
+  },
+  "tipOpenTheHardeningPanelAntiDetectionSpoofRules": {
+    "message": "Open the hardening panel: anti-detection spoof rules"
+  },
+  "tipSwitchToDefaultUseragentCtrlShiftD": {
+    "message": "Switch to default useragent (Ctrl+Shift+D)"
+  },
+  "tipWhatIsMyUseragent": {
+    "message": "What is my useragent?"
+  },
+  "tipReportBugs": {
+    "message": "Report bugs"
+  },
+  "tipExportSettingsAsAJSONFile": {
+    "message": "Export settings as a JSON file"
+  },
+  "tipImportSettingsFromAJSONFile": {
+    "message": "Import settings from a JSON file"
+  },
+  "tipFactoryResetClearsAllSettingsRulesAndTheToolbar": {
+    "message": "Factory reset: clears all settings, rules and the toolbar icon state"
+  },
+  "tipReloadCurrentTab": {
+    "message": "Reload current tab"
+  },
+  "tipDarkLightMode": {
+    "message": "Dark | Light mode"
+  },
+  "tipOpenSupportPageFAQ": {
+    "message": "Open support page (FAQ)"
+  },
+  "tipMakeADonation": {
+    "message": "Make a donation"
+  },
+  "uiLanguage": {
+    "message": "Interface language"
+  },
+  "uiLanguageAuto": {
+    "message": "Browser language"
+  },
+  "uiLanguageEnglish": {
+    "message": "English"
+  },
+  "uiLanguageRussian": {
+    "message": "Русский"
+  },
+  "tipInterfaceLanguage": {
+    "message": "Choose the popup language independently of the spoofed browser language"
+  },
+  "statusUserAgentOn": {
+    "message": "User-Agent: $1 on $2"
+  },
+  "statusUserAgent": {
+    "message": "User-Agent: $1"
+  },
+  "statusDefault": {
+    "message": "User-Agent: Default"
+  },
+  "statusUnavailable": {
+    "message": "User-Agent: Not Available"
+  },
+  "statusCustom": {
+    "message": "User-Agent: Custom"
+  },
+  "statusThisTab": {
+    "message": "This tab: $1"
+  },
+  "statusGlobalUserAgent": {
+    "message": "global useragent"
+  },
+  "statusCustomString": {
+    "message": "custom string"
+  },
+  "statusModeThisTab": {
+    "message": "Mode: this tab only"
+  },
+  "statusModeAllTabs": {
+    "message": "Mode: all tabs"
+  },
+  "statusScopeLabel": {
+    "message": "Scope:"
+  },
+  "statusExclusive": {
+    "message": "exclusive"
+  },
+  "statusInclusive": {
+    "message": "inclusive"
+  },
+  "statusListLabel": {
+    "message": "List:"
+  },
+  "dialogConfirmDefault": {
+    "message": "Are you sure you want to switch to the default useragent?"
+  },
+  "dialogConfirmReset": {
+    "message": "Are you sure you want to reset all settings?"
+  },
+  "dialogRemoveSaved": {
+    "message": "Remove \"$1\" from the saved useragents?"
+  },
+  "dialogSaveUserAgent": {
+    "message": "Save this useragent as:"
+  },
+  "dialogCopyUserAgent": {
+    "message": "Copy this useragent:"
+  },
+  "messageTypeUserAgent": {
+    "message": "Type a useragent string first"
+  },
+  "messageInvalidSettings": {
+    "message": "Invalid settings file"
+  },
+  "messageCopied": {
+    "message": "Useragent copied"
+  },
+  "messageExploreMore": {
+    "message": "Explore more"
+  },
+  "messageInvalidEntries": {
+    "message": "Invalid entries: $1"
+  },
+  "messageInjectionFailed": {
+    "message": "Injection failed: $1"
+  },
+  "messageNoHomepage": {
+    "message": "No homepage_url configured in manifest"
+  },
+  "messageRebuildFailed": {
+    "message": "Rebuild failed: $1"
+  },
+  "messageRuleUpdateFailed": {
+    "message": "Rule update failed: $1"
+  },
+  "messageEmptyInput": {
+    "message": "empty input"
+  }
+}

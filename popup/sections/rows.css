@@ -1,0 +1,81 @@
+#editor-ua,
+#library-list {
+  color: #333;
+  height: 40px;
+  font-size: 13px;
+  text-align: left;
+  text-indent: 10px;
+  vertical-align: middle;
+  background-color: #fff;
+  font-family: monospace;
+  box-sizing: border-box;
+  border: solid 1px rgba(0, 0, 0, 0.25);
+}
+
+#library-list {
+  width: calc(100% - 150px);
+}
+
+#editor-ua {
+  width: calc(100% - 105px);
+}
+
+.rowaction {
+  margin: 0;
+  fill: #555;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  line-height: 36px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  transition: 300ms ease all;
+  border: solid 1px rgba(0, 0, 0, 0.25);
+}
+
+.rowaction svg {
+  pointer-events: none;
+  vertical-align: middle;
+}
+
+.rowaction svg path,
+.rowaction svg rect {
+  fill: #555;
+}
+
+.rowaction:hover {
+  fill: #000;
+  border: solid 1px #8d8d8d;
+}
+
+.rowaction:hover svg path,
+.rowaction:hover svg rect {
+  fill: #000;
+}
+
+.rowaction.disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+html[theme='dark'] #editor-ua,
+html[theme='dark'] #library-list {
+  color: #ebebeb;
+  background-color: #1e1e1e;
+  border-color: rgb(255 255 255 / 25%);
+}
+
+html[theme='dark'] .rowaction {
+  border-color: rgb(255 255 255 / 25%);
+}
+
+html[theme='dark'] .rowaction svg path,
+html[theme='dark'] .rowaction svg rect {
+  fill: #ebebeb;
+}
+
+html[theme='dark'] .rowaction:hover svg path,
+html[theme='dark'] .rowaction:hover svg rect {
+  fill: #fff;
+}

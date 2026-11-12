@@ -1,0 +1,212 @@
+#section-5,
+#section-6 {
+  display: none;
+}
+
+#domains-table,
+#advanced-table {
+  width: 100%;
+  margin: auto;
+  empty-cells: show;
+  table-layout: auto;
+  border-spacing: 5px;
+}
+
+#domains-table tr td,
+#advanced-table tr td {
+  border: 0;
+  padding: 0;
+  transition: 300ms ease all;
+  font-family: system-ui, sans-serif;
+}
+
+#domains-table tr td.description,
+#advanced-table tr td.description {
+  width: 100%;
+  height: 28px;
+  min-height: 28px;
+  max-height: 28px;
+  line-height: 28px;
+}
+
+#domains-table tr td.separator,
+#advanced-table tr td.separator {
+  border: 0;
+  padding: 0;
+  height: 5px;
+}
+
+#domains-table tr td.userinput,
+#advanced-table tr td.userinput {
+  height: 58px;
+  min-height: 58px;
+  max-height: 58px;
+  white-space: nowrap;
+  border: solid 1px rgba(0, 0, 0, 0.10) !important;
+}
+
+#advanced-table tr td#readout-td {
+  height: 128px;
+  padding: 0 5px;
+  text-align: left;
+  position: relative;
+  box-shadow: none !important;
+}
+
+#domains[type='active'],
+#advanced[type='active'] {
+  border: solid 1px #8d8d8d;
+}
+
+.backbutton {
+  margin: 0;
+  padding: 0;
+  width: 42px;
+  height: 28px;
+  display: none;
+  cursor: pointer;
+  line-height: 28px;
+  text-align: center;
+  align-items: center;
+  border: 0 !important;
+  justify-content: center;
+  transition: 300ms ease all;
+  fill: var(--description-fg, #fff);
+  background-color: var(--description-bg, #7f7f7f);
+}
+
+.backbutton:hover {
+  fill: var(--description-fg, #fff);
+  background-color: var(--description-bg-hover, #6e6e6e);
+}
+
+/* the footer home button makes the back arrows redundant: they only come
+   back when the settings option asks for them */
+
+html[data-backbuttons='true'] .backbutton {
+  display: inline-flex;
+}
+
+tr.modeline {
+  display: none;
+}
+
+body[mode='thistab'] tr.modeline {
+  display: table-row;
+}
+
+tr.pertabline {
+  display: none;
+}
+
+body[mode='thistab'] tr.pertabline {
+  display: table-row;
+}
+
+#footer tr.modeline td,
+#domains-table tr.modeline td,
+#advanced-table tr.modeline td {
+  color: #333;
+  height: 24px;
+  padding: 0 10px;
+  font-size: 12px;
+  text-align: left;
+  font-weight: 600;
+  user-select: none;
+  border: 0 !important;
+  font-family: system-ui, sans-serif;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#pertab-string {
+  height: 34px;
+  font-size: 12px;
+  overflow: hidden;
+  line-height: 34px;
+  text-indent: 10px;
+  white-space: nowrap;
+  display: inline-block;
+  font-family: monospace;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  width: calc(100% - 60px);
+}
+
+#domains-table tr td.domains-input {
+  height: 128px;
+  min-height: 128px;
+  max-height: 128px;
+}
+
+#domains-table #url {
+  border: 0;
+  outline: 0;
+  margin: auto;
+  resize: none;
+  height: 118px;
+  padding: 0 5px;
+  display: block;
+  overflow: auto;
+  text-indent: 0;
+  font-size: 13px;
+  white-space: pre;
+  line-height: 22px;
+  box-sizing: border-box;
+  font-family: monospace;
+  width: calc(100% - 10px);
+}
+
+#domains-table tr td.scopenote {
+  border: 0;
+  color: #777;
+  height: auto;
+  padding: 10px;
+  font-size: 13px;
+  text-align: left;
+  line-height: 22px;
+  white-space: normal;
+}
+
+.noteline {
+  display: block;
+}
+
+body[mode='thistab'] #domains-table td.userinput {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+html[theme='dark'] #footer tr.modeline td,
+html[theme='dark'] #domains-table tr.modeline td,
+html[theme='dark'] #advanced-table tr.modeline td {
+  color: #ebebeb;
+  background-color: rgb(255 255 255 / 6%);
+}
+
+html[theme='dark'] #domains-table tr td.scopenote {
+  color: #999;
+}
+
+html[theme='dark'] #readout-copy,
+html[theme='dark'] #domains-table tr td.userinput,
+html[theme='dark'] #advanced-table tr td.userinput {
+  border-color: rgb(255 255 255 / 10%) !important;
+}
+
+html[theme='dark'] #advanced-table tr td#readout-td {
+  border-color: rgb(255 255 255 / 25%) !important;
+}
+
+html[theme='dark'] .backbutton {
+  background-color: var(--description-bg, #444);
+}
+
+html[theme='dark'] #domains-table tr td,
+html[theme='dark'] #advanced-table tr td {
+  border-color: rgb(255 255 255 / 10%);
+}
+
+html[theme='dark'] #domains[type='active'],
+html[theme='dark'] #advanced[type='active'] {
+  border-color: rgb(255 255 255 / 65%);
+}

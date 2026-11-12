@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DOM insertion compatibility</title>
+</head>
+<body>
+<pre id="out">pending</pre>
+<script>
+  window.originalAppend = Element.prototype.append;
+  window.originalPrepend = Element.prototype.prepend;
+  window.originalAppendChild = Node.prototype.appendChild;
+  window.originalInsertBefore = Node.prototype.insertBefore;
+  window.selectedUA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Fake Chrome/156.0.0.0';
+  sessionStorage.setItem('useragent-switcher-metahints', JSON.stringify({
+    ua: window.selectedUA,
+    appversion: '5.0 (Windows NT 10.0; Win64; x64) Chrome/156.0.0.0',
+    vendor: 'Google Inc.',
+    attr: 'Win32',
+    text: 'Windows',
+    version: '156',
+    brands: [{brand: 'Chromium', version: '156'}],
+    fullbrands: [{brand: 'Chromium', version: '156.0.0.0'}],
+    bundle: {
+      platformversion: '13.0.0',
+      bitness: '64',
+      architecture: 'x86',
+      model: '',
+      uafullversion: '156.0.0.0'
+    },
+    mobile: false,
+    native: true,
+    forged: true,
+    realbits: false,
+    frames: true,
+    sandbox: true
+  }));
+</script>
+<script src="../content/main.js"></script>
+<script>
+  (function () {
+    const result = {};
+    try {
+      result.nativeAppend = Element.prototype.append === window.originalAppend;
+      result.nativePrepend = Element.prototype.prepend === window.originalPrepend;
+      result.nativeAppendChild = Node.prototype.appendChild === window.originalAppendChild;
+      result.nativeInsertBefore = Node.prototype.insertBefore === window.originalInsertBefore;
+      const iframe = document.createElement('iframe');
+      document.body.appendChild(iframe);
+      const child = iframe.contentWindow;
+      result.frameExists = child !== null;
+      result.frameUA = child.navigator.userAgent === window.selectedUA;
+      result.framePlatform = child.navigator.platform === 'Win32';
+      result.frameAppVersion = child.navigator.appVersion === '5.0 (Windows NT 10.0; Win64; x64) Chrome/156.0.0.0';
+      result.iframeIdentity = iframe.contentWindow === child;
+      const rule = document.createElement('script');
+      rule.type = 'speculationrules';
+      rule.textContent = '{"prefetch":[]}';
+      document.body.appendChild(rule);
+      result.ruleInsertionWorks = rule.isConnected;
+      result.ruleNativeAppend = Node.prototype.appendChild === window.originalAppendChild;
+      sessionStorage.removeItem('useragent-switcher-metahints');
+      result.defaultPlatform = iframe.contentWindow.navigator.platform !== 'invalid-platform';
+    } catch (error) {
+      result.error = error.stack || String(error);
+    }
+    const checks = Object.keys(result).filter(name => name !== 'error');
+    result.passed = checks.length === 12 && checks.every(name => result[name] === true);
+    document.getElementById('out').textContent = JSON.stringify(result);
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,614 @@
+{
+  "extensionName": {
+    "message": "User-Agent Switcher"
+  },
+  "extensionDescription": {
+    "message": "Переключение профилей User-Agent браузера через панель инструментов."
+  },
+  "extensionTitle": {
+    "message": "User-Agent Switcher"
+  },
+  "commandToggleDefault": {
+    "message": "Вернуться к стандартному User-Agent"
+  },
+  "uiMobileDevice": {
+    "message": "Мобильное устройство"
+  },
+  "uiDesktopBrowser": {
+    "message": "Настольный браузер"
+  },
+  "uiOperatingSystem": {
+    "message": "Операционная система"
+  },
+  "uiSettings": {
+    "message": "Настройки"
+  },
+  "uiApplyUseragentsTo": {
+    "message": "Применять User-Agent"
+  },
+  "uiActiveTabOnly": {
+    "message": "Только активная вкладка"
+  },
+  "uiAllTabs": {
+    "message": "Все вкладки"
+  },
+  "uiCompleteSpoof": {
+    "message": "Полная подмена"
+  },
+  "uiFullRequestCoverage": {
+    "message": "Все типы запросов"
+  },
+  "uiLiveApplyToOpenTabs": {
+    "message": "Применять к открытым вкладкам сразу"
+  },
+  "uiConfirmBeforeDefault": {
+    "message": "Подтверждать возврат к стандартному UA"
+  },
+  "uiConfirmBeforeReset": {
+    "message": "Подтверждать сброс настроек"
+  },
+  "uiShowBackButtons": {
+    "message": "Показывать кнопки «Назад»"
+  },
+  "uiRememberLastView": {
+    "message": "Запоминать последний раздел"
+  },
+  "uiRealVendorPassthrough": {
+    "message": "Передавать реального производителя браузера"
+  },
+  "uiStrictUACleanup": {
+    "message": "Проверять строку User-Agent"
+  },
+  "uiHeaderColor": {
+    "message": "Цвет заголовков"
+  },
+  "uiStatusRow": {
+    "message": "Строка состояния"
+  },
+  "uiTall": {
+    "message": "Высокая"
+  },
+  "uiShort": {
+    "message": "Низкая"
+  },
+  "uiPlain": {
+    "message": "Простая"
+  },
+  "uiCustomUseragents": {
+    "message": "Свои User-Agent"
+  },
+  "uiThisTabModeIsOnPicksBelowApplyTo": {
+    "message": "Режим одной вкладки: выбор применяется только к ней"
+  },
+  "uiDefaultUseragent": {
+    "message": "Стандартный User-Agent"
+  },
+  "uiSavedUseragents": {
+    "message": "Сохранённые User-Agent"
+  },
+  "uiDetectedUseragent": {
+    "message": "Определённый User-Agent"
+  },
+  "uiCustomDomains": {
+    "message": "Домены"
+  },
+  "uiThisTabModeIsOnPicksIgnoreTheDomain": {
+    "message": "Режим одной вкладки: список доменов не ограничивает выбор"
+  },
+  "uiGlobalScope": {
+    "message": "Область действия"
+  },
+  "uiExclusive": {
+    "message": "Исключения"
+  },
+  "uiInclusive": {
+    "message": "Только указанные"
+  },
+  "uiTheUseragentAppliesOnlyOnTheDomainsInThe": {
+    "message": "— подмена действует только на доменах из списка"
+  },
+  "uiTheUseragentAppliesOnEverySiteExceptTheDomains": {
+    "message": "— подмена действует везде, кроме доменов из списка"
+  },
+  "uiDomainList": {
+    "message": "Список доменов"
+  },
+  "uiHardeningRules": {
+    "message": "Настройки совместимости и приватности"
+  },
+  "uiNativeDisguisingCodeReadsBackAsBuiltIn": {
+    "message": "Нативная совместимость API"
+  },
+  "uiComputedClientHintsBrandListFitsTheFake": {
+    "message": "Вычисляемые Client Hints"
+  },
+  "uiRichEntropyDetailsModelAndFormFactors": {
+    "message": "Расширенные характеристики устройства"
+  },
+  "uiRealHighEntropyValuesRevealsThisMachine": {
+    "message": "Реальные характеристики (раскрывает устройство)"
+  },
+  "uiDeleteBrowserLeftoversRemovesForeignFields": {
+    "message": "Скрывать свойства другого браузера"
+  },
+  "uiShortAppVersionFirefoxForm": {
+    "message": "Краткий appVersion (Firefox)"
+  },
+  "uiForgedToStringChangedCodeHides": {
+    "message": "Нативный вид методов (toString)"
+  },
+  "uiPinDeviceSpecsFakeCoresMemory": {
+    "message": "Фиксировать число ядер и объём памяти"
+  },
+  "uiHideAutomationFlagBotBadgeOff": {
+    "message": "Подменять флаг автоматизации"
+  },
+  "uiEchoGuardUAEchoesAnswerTheFake": {
+    "message": "Подмена ответа с User-Agent"
+  },
+  "uiIframeRules": {
+    "message": "Правила iframe"
+  },
+  "uiFirstPaintSpoofFakeShipsEarly": {
+    "message": "Подмена до запуска скриптов страницы"
+  },
+  "uiSpoofIframesBoxesGetTheFake": {
+    "message": "Подмена внутри iframe"
+  },
+  "uiSpoofSandboxedIframesLockedBoxesToo": {
+    "message": "Подмена в изолированных iframe"
+  },
+  "uiDebugTraceFakeVisibleToPages": {
+    "message": "Отладочный след (виден страницам)"
+  },
+  "uiMatchedLanguage": {
+    "message": "Язык браузера"
+  },
+  "uiMatchBrowserLanguageLanguageFollowsFake": {
+    "message": "Подменять язык браузера"
+  },
+  "uiThisTabModeIsOnChangesApplyToThis": {
+    "message": "Режим одной вкладки: настройки применяются только к ней"
+  },
+  "uiUserAgentSwitcher": {
+    "message": "User-Agent Switcher"
+  },
+  "tipAppleIOSIPhone": {
+    "message": "Apple iOS (iPhone)"
+  },
+  "tipGoogleAndroid": {
+    "message": "Google Android"
+  },
+  "tipMicrosoftWindowsPhone": {
+    "message": "Microsoft Windows Phone"
+  },
+  "tipSamsungTizenOS": {
+    "message": "Samsung Tizen OS"
+  },
+  "tipNokiaSymbian": {
+    "message": "Nokia Symbian"
+  },
+  "tipMozillaFirefoxOS": {
+    "message": "Mozilla Firefox OS"
+  },
+  "tipGoogleChrome": {
+    "message": "Google Chrome"
+  },
+  "tipOpera": {
+    "message": "Opera"
+  },
+  "tipMozillaFirefox": {
+    "message": "Mozilla Firefox"
+  },
+  "tipAppleSafari": {
+    "message": "Apple Safari"
+  },
+  "tipMicrosoftEdge": {
+    "message": "Microsoft Edge"
+  },
+  "tipMicrosoftExplorer": {
+    "message": "Microsoft Explorer"
+  },
+  "tipMicrosoftWindows": {
+    "message": "Microsoft Windows"
+  },
+  "tipAppleMacOS": {
+    "message": "Apple Mac-OS"
+  },
+  "tipLinux": {
+    "message": "Linux"
+  },
+  "tipGoogleChromeOS": {
+    "message": "Google Chrome-OS"
+  },
+  "tipIBMWarpOS2": {
+    "message": "IBM Warp OS/2"
+  },
+  "tipFreeBSDOS": {
+    "message": "FreeBSD OS"
+  },
+  "tipGoBackToTheMainView": {
+    "message": "Вернуться к основному экрану"
+  },
+  "tipChooseWherePickedUseragentsAreAppliedToEveryTab": {
+    "message": "Выберите, где применять профиль User-Agent: во всех вкладках или только в текущей"
+  },
+  "tipPickedUseragentsApplyToThisTabOnlyOtherTabs": {
+    "message": "Применять профиль только к этой вкладке; остальные вкладки используют стандартный User-Agent"
+  },
+  "tipPickedUseragentsApplyToEveryTab": {
+    "message": "Применять выбранный профиль ко всем вкладкам"
+  },
+  "tipAlsoFakesTheClientHintHeadersAndTheJS": {
+    "message": "Дополнительно подменять HTTP Client Hints и JavaScript API"
+  },
+  "tipFakeSecCHUAHeadersNavigatorUserAgentDataPlatformAnd": {
+    "message": "Подменять Sec-CH-UA, navigator.userAgentData, платформу и производителя браузера"
+  },
+  "tipAlsoSendsTheFakeUAOnPageFetchesAJAX": {
+    "message": "Передавать выбранный User-Agent во всех сетевых запросах, включая fetch, AJAX и WebSocket"
+  },
+  "tipFakeUAOnAllRequestTypes": {
+    "message": "Подменять User-Agent во всех типах запросов"
+  },
+  "tipOpenTabsPickUpAUseragentSwitchImmediatelyWithout": {
+    "message": "Применять выбранный User-Agent к уже открытым вкладкам без обновления страницы"
+  },
+  "tipApplySwitchesToOpenTabsInstantly": {
+    "message": "Переключать открытые вкладки немедленно"
+  },
+  "tipAsksBeforeSwitchingBackToTheDefaultUseragent": {
+    "message": "Запрашивать подтверждение перед возвратом к стандартному User-Agent"
+  },
+  "tipAskForConfirmationBeforeSwitchingToTheDefaultUseragent": {
+    "message": "Подтвердить возврат к стандартному User-Agent"
+  },
+  "tipAsksBeforeTheFactoryResetClearsAllSettingsRules": {
+    "message": "Запрашивать подтверждение перед восстановлением заводских настроек"
+  },
+  "tipAskForConfirmationBeforeTheFactoryReset": {
+    "message": "Подтвердить полный сброс настроек"
+  },
+  "tipShowTheBackArrowInTheHeaderOfThe": {
+    "message": "Показывать стрелку назад в заголовках разделов; нижняя кнопка «Главная» возвращает на основной экран"
+  },
+  "tipShowTheBackArrowInThePanelHeaders": {
+    "message": "Показывать кнопки «Назад» в разделах"
+  },
+  "tipThePopupReopensOnTheViewThatWasOpen": {
+    "message": "Открывать popup в последнем посещённом разделе: настройки, свои User-Agent или домены"
+  },
+  "tipReopenThePopupOnTheLastOpenView": {
+    "message": "Запоминать открытый раздел"
+  },
+  "tipWhenTheFakeBrowserHasNoVendorOfIts": {
+    "message": "При выборе профиля без собственного производителя оставлять реального производителя браузера"
+  },
+  "tipKeepTheRealVendorVisibleWhenTheFakeBrowser": {
+    "message": "Не скрывать настоящего производителя, если в выбранном профиле он отсутствует"
+  },
+  "tipCleansPastedSavedAndImportedUseragentStringsBeforeThe": {
+    "message": "Очищать введённые и импортированные строки User-Agent: только печатные символы, не более 512"
+  },
+  "tipCleanPastedAndImportedStringsBeforeTheEngineApplies": {
+    "message": "Проверять и очищать введённые строки User-Agent перед применением"
+  },
+  "tipTintsTheDescriptionHeaderStripsTheBackArrowsAnd": {
+    "message": "Задавать цвет полос заголовков, стрелок и активных элементов интерфейса"
+  },
+  "tipReturnTheHeaderColorToTheThemeDefault": {
+    "message": "Вернуть стандартный цвет заголовков"
+  },
+  "tipPickTheColorOfTheDescriptionHeaderStrips": {
+    "message": "Выбрать цвет заголовков разделов"
+  },
+  "tipTheFooterStatusStripTallOrShortHeightAnd": {
+    "message": "Настроить высоту и оформление строки состояния или скрыть её"
+  },
+  "tipTallerStripWithTheInnerShineOfTheSettings": {
+    "message": "Высокая строка состояния"
+  },
+  "tipSmallOneLineStripDefault": {
+    "message": "Низкая строка состояния (по умолчанию)"
+  },
+  "tipStripTheBackgroundColorPlainCellWithAThin": {
+    "message": "Убрать заливку строки состояния, оставить тонкую рамку"
+  },
+  "tipShowTheFooterStatusStrip": {
+    "message": "Показывать строку состояния"
+  },
+  "tipTypeOrPasteAUseragentStringThenApplyIt": {
+    "message": "Введите или вставьте User-Agent, затем примените его или сохраните в список"
+  },
+  "tipTypeOrPasteAUseragentString": {
+    "message": "Введите или вставьте строку User-Agent"
+  },
+  "tipApplyThisUseragentToEveryTabOrToThis": {
+    "message": "Применить User-Agent во всех вкладках или только в активной по текущему режиму"
+  },
+  "tipSaveThisStringToTheSavedUseragentsListBelow": {
+    "message": "Добавить строку в список сохранённых User-Agent"
+  },
+  "tipTheUseragentOverrideCurrentlyAppliedToThisTabBy": {
+    "message": "User-Agent, назначенный текущей вкладке в режиме одной вкладки"
+  },
+  "tipRemoveThisTabSUseragentOverrideTheTabReturns": {
+    "message": "Очистить профиль текущей вкладки и вернуть глобальный User-Agent"
+  },
+  "tipSavedUseragentStringsApplyTheSelectedOneLoadIt": {
+    "message": "Сохранённые строки User-Agent: выбор, применение, редактирование и удаление"
+  },
+  "tipPickASavedUseragentString": {
+    "message": "Выберите сохранённый User-Agent"
+  },
+  "tipApplyTheSelectedStringToEveryTabOrTo": {
+    "message": "Применить выбранную строку в соответствии с режимом вкладок"
+  },
+  "tipLoadTheSelectedStringIntoTheEditorAbove": {
+    "message": "Загрузить выбранную строку в редактор"
+  },
+  "tipRemoveTheSelectedSavedString": {
+    "message": "Удалить выбранную строку из сохранённых"
+  },
+  "tipWhatThisPageCurrentlyReportsAsItsUseragentUse": {
+    "message": "User-Agent, который сообщает открытая страница"
+  },
+  "tipCopyTheDetectedUseragentToTheClipboard": {
+    "message": "Скопировать определённый User-Agent в буфер обмена"
+  },
+  "tipChooseWhetherTheUseragentAppliesOnlyOnTheListed": {
+    "message": "Применять подмену только к указанным доменам либо ко всем, кроме указанных"
+  },
+  "tipExclusiveTheUseragentAppliesOnEverySiteExceptThe": {
+    "message": "Исключения: подменять User-Agent везде, кроме доменов из списка"
+  },
+  "tipInclusiveTheUseragentAppliesOnlyOnTheDomainsIn": {
+    "message": "Только указанные: подменять User-Agent лишь на доменах из списка"
+  },
+  "tipOneDomainPerLineYahooComGoogleComOr": {
+    "message": "Укажите по одному домену в строке: yahoo.com, google.com; all_urls — для всех сайтов"
+  },
+  "tipIEYahooComWwwGoogleComOrAll": {
+    "message": "например: yahoo.com\nwww.google.com\nили all_urls"
+  },
+  "tipMakesTheFakeSurviveTheReadBackChecksReading": {
+    "message": "Использовать настоящий экземпляр NavigatorUAData Chromium: значения берутся из профиля, нативные методы сохраняют проверку объекта."
+  },
+  "tipTheFakeSurvivesTheClassicReadBackChecks": {
+    "message": "Настоящий экземпляр NavigatorUAData со значениями выбранного профиля"
+  },
+  "tipBuildsTheSmallBrandListChromeItselfWouldSend": {
+    "message": "Формировать список брендов Client Hints по версии выбранного Chromium"
+  },
+  "tipBrandListAndOrderDeriveFromTheFakedVersion": {
+    "message": "Список брендов и порядок соответствуют выбранной версии Chromium"
+  },
+  "tipCoreHighEntropyValuesAlwaysStayConsistentWithThe": {
+    "message": "Выдавать согласованные расширенные значения модели устройства и форм-факторов"
+  },
+  "tipAddModelAndFormFactorDetailsToTheConsistent": {
+    "message": "Дополнить Client Hints моделью устройства и форм-факторами"
+  },
+  "tipSitesThatAskForExtraBrowserDetailsGetThe": {
+    "message": "Передавать реальную архитектуру и разрядность устройства по запросу сайта; раскрывает параметры компьютера"
+  },
+  "tipExtraDetailsAnswerThisMachineRevealsTheFake": {
+    "message": "Передавать реальную архитектуру и разрядность устройства"
+  },
+  "tipRemovesBrowserPropertiesTheFakedBrowserShouldNotHave": {
+    "message": "Скрывать свойства, отсутствующие в выбранном браузере, например Firefox-специфичные поля в профиле Chrome"
+  },
+  "tipExtrasTheFakedFamilyWouldNotHaveGetRemoved": {
+    "message": "Скрыть свойства другого семейства браузеров"
+  },
+  "tipAFakeFirefoxReportsTheShortVersionStringThe": {
+    "message": "Использовать краткую строку appVersion для профилей Firefox"
+  },
+  "tipFirefoxFakesUseTheShortVersionString": {
+    "message": "Для Firefox использовать краткий appVersion"
+  },
+  "tipSitesCanInspectTheCodeBehindAChangedProperty": {
+    "message": "Имитировать нативную строку toString у подменённых JavaScript-методов"
+  },
+  "tipChangedCodeAnswersLikeBuiltInCode": {
+    "message": "Возвращать стандартный вид метода при toString"
+  },
+  "tipSitesCanAskHowManyCPUCoresAndHow": {
+    "message": "Подменять число процессорных ядер и объём памяти значениями профиля"
+  },
+  "tipCoresAndMemoryAnswerFixedFakeNumbers": {
+    "message": "Передавать фиксированные значения ядер и памяти"
+  },
+  "tipSitesThatRunAutomationToolsBotsTestDriversCarry": {
+    "message": "Возвращать false для navigator.webdriver при активной подмене"
+  },
+  "tipTheAutomationFlagAnswersFalseWhileTheFakeIs": {
+    "message": "navigator.webdriver возвращает false, пока действует профиль"
+  },
+  "tipAPageAnswerWhoseTextIsExactlyThisBrowser": {
+    "message": "Если ответ страницы полностью совпадает с реальным User-Agent, возвращать выбранный User-Agent"
+  },
+  "tipAPageAnswerThatIsExactlyTheRealIdentity": {
+    "message": "Подменять точное совпадение ответа с реальным User-Agent"
+  },
+  "tipSitesRunPartsOfTheirPageInHiddenBoxes": {
+    "message": "Передавать данные выбранного профиля через заголовок Server-Timing до выполнения первых скриптов"
+  },
+  "tipEveryFrameReportsTheFakeBeforeItsFirstScript": {
+    "message": "Применять профиль перед первым скриптом во всех подходящих фреймах"
+  },
+  "tipHiddenBoxesOnAPageReportTheFakeLike": {
+    "message": "Распространять выбранный User-Agent на вложенные фреймы"
+  },
+  "tipFramesOfTheTabCarryTheFakeToo": {
+    "message": "Подменять User-Agent во фреймах"
+  },
+  "tipSitesBuildLockedBoxesAndReadTheIdentityInside": {
+    "message": "Устанавливать подмену в доступных изолированных iframe при их создании"
+  },
+  "tipLockedFramesGetTheFakeTheMomentTheyAre": {
+    "message": "Подменять значения в изолированных iframe сразу после создания"
+  },
+  "tipNormallyTheFakeTravelsInvisiblyThisDebugSwitchLeaves": {
+    "message": "Оставлять отладочную метку Server-Timing видимой странице; не рекомендуется при обычной работе"
+  },
+  "tipTheServerTimingPayloadStaysReadableTestingAid": {
+    "message": "Показывать метку Server-Timing для диагностики"
+  },
+  "tipTheFakeSpeaksTheLanguageListBelowPagesGet": {
+    "message": "Задавать список языков для заголовка Accept-Language и navigator.languages"
+  },
+  "tipLanguageHeaderAndNavigatorLanguagesMoveTogether": {
+    "message": "Подменять язык страницы и заголовок запроса согласованно"
+  },
+  "tipTheLanguageListUsedWhenMatchLanguageIsOn": {
+    "message": "Список языков через запятую в порядке приоритета: en-US, en; не больше восьми"
+  },
+  "tipShowTheMainUseragentView": {
+    "message": "Вернуться на основной экран выбора User-Agent"
+  },
+  "tipOpenTheSettingsPanel": {
+    "message": "Открыть настройки"
+  },
+  "tipOpenTheCustomDomainsViewWhereTheGlobalUseragent": {
+    "message": "Открыть настройки списка доменов"
+  },
+  "tipOpenTheCustomUseragentsViewEditorSavedStringsAnd": {
+    "message": "Открыть редактор своих User-Agent"
+  },
+  "tipOpenTheHardeningPanelAntiDetectionSpoofRules": {
+    "message": "Открыть настройки совместимости и приватности"
+  },
+  "tipSwitchToDefaultUseragentCtrlShiftD": {
+    "message": "Переключить на стандартный User-Agent (Ctrl+Shift+D)"
+  },
+  "tipWhatIsMyUseragent": {
+    "message": "Какой у меня User-Agent?"
+  },
+  "tipReportBugs": {
+    "message": "Сообщить об ошибке"
+  },
+  "tipExportSettingsAsAJSONFile": {
+    "message": "Экспортировать настройки в JSON"
+  },
+  "tipImportSettingsFromAJSONFile": {
+    "message": "Импортировать настройки из JSON"
+  },
+  "tipFactoryResetClearsAllSettingsRulesAndTheToolbar": {
+    "message": "Сбросить настройки, правила и состояние значка расширения"
+  },
+  "tipReloadCurrentTab": {
+    "message": "Обновить текущую вкладку"
+  },
+  "tipDarkLightMode": {
+    "message": "Переключить светлую и тёмную тему"
+  },
+  "tipOpenSupportPageFAQ": {
+    "message": "Открыть страницу помощи (FAQ)"
+  },
+  "tipMakeADonation": {
+    "message": "Поддержать разработку"
+  },
+  "uiLanguage": {
+    "message": "Язык интерфейса"
+  },
+  "uiLanguageAuto": {
+    "message": "Язык браузера"
+  },
+  "uiLanguageEnglish": {
+    "message": "English"
+  },
+  "uiLanguageRussian": {
+    "message": "Русский"
+  },
+  "tipInterfaceLanguage": {
+    "message": "Выбрать язык интерфейса независимо от языка подменяемого браузера"
+  },
+  "statusUserAgentOn": {
+    "message": "User-Agent: $1 на $2"
+  },
+  "statusUserAgent": {
+    "message": "User-Agent: $1"
+  },
+  "statusDefault": {
+    "message": "User-Agent: стандартный"
+  },
+  "statusUnavailable": {
+    "message": "User-Agent: недоступен"
+  },
+  "statusCustom": {
+    "message": "User-Agent: свой"
+  },
+  "statusThisTab": {
+    "message": "Эта вкладка: $1"
+  },
+  "statusGlobalUserAgent": {
+    "message": "глобальный User-Agent"
+  },
+  "statusCustomString": {
+    "message": "своя строка"
+  },
+  "statusModeThisTab": {
+    "message": "Режим: одна вкладка"
+  },
+  "statusModeAllTabs": {
+    "message": "Режим: все вкладки"
+  },
+  "statusScopeLabel": {
+    "message": "Область:"
+  },
+  "statusExclusive": {
+    "message": "исключения"
+  },
+  "statusInclusive": {
+    "message": "только указанные"
+  },
+  "statusListLabel": {
+    "message": "Список:"
+  },
+  "dialogConfirmDefault": {
+    "message": "Переключиться на стандартный User-Agent?"
+  },
+  "dialogConfirmReset": {
+    "message": "Сбросить все настройки расширения?"
+  },
+  "dialogRemoveSaved": {
+    "message": "Удалить «$1» из сохранённых User-Agent?"
+  },
+  "dialogSaveUserAgent": {
+    "message": "Под каким именем сохранить User-Agent?"
+  },
+  "dialogCopyUserAgent": {
+    "message": "Скопируйте этот User-Agent:"
+  },
+  "messageTypeUserAgent": {
+    "message": "Сначала введите строку User-Agent"
+  },
+  "messageInvalidSettings": {
+    "message": "Неверный файл настроек"
+  },
+  "messageCopied": {
+    "message": "User-Agent скопирован"
+  },
+  "messageExploreMore": {
+    "message": "Другие расширения"
+  },
+  "messageInvalidEntries": {
+    "message": "Неверные домены: $1"
+  },
+  "messageInjectionFailed": {
+    "message": "Ошибка внедрения скрипта: $1"
+  },
+  "messageNoHomepage": {
+    "message": "В manifest.json не указан homepage_url"
+  },
+  "messageRebuildFailed": {
+    "message": "Ошибка перестроения правил: $1"
+  },
+  "messageRuleUpdateFailed": {
+    "message": "Ошибка обновления правил: $1"
+  },
+  "messageEmptyInput": {
+    "message": "пустой список"
+  }
+}
